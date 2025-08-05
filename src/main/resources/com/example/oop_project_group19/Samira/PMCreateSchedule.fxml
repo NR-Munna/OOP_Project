@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Samira.PMCreateScheduleController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="Create Project Schedule" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Project Information:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="110.0" text="Project Name:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="projectNameTextField" layoutX="150.0" layoutY="105.0" prefWidth="200.0" />
+
+        <Label layoutX="370.0" layoutY="110.0" text="Project Type:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="projectTypeComboBox" layoutX="460.0" layoutY="105.0" prefWidth="150.0" promptText="Select Type" />
+
+        <Label layoutX="50.0" layoutY="145.0" text="Start Date:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="startDatePicker" layoutX="150.0" layoutY="140.0" prefWidth="140.0" />
+
+        <Label layoutX="310.0" layoutY="145.0" text="End Date:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="endDatePicker" layoutX="370.0" layoutY="140.0" prefWidth="140.0" />
+
+        <Label layoutX="530.0" layoutY="145.0" text="Priority:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="priorityComboBox" layoutX="580.0" layoutY="140.0" prefWidth="70.0" promptText="High" />
+
+        <Label layoutX="50.0" layoutY="180.0" text="Description:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="descriptionTextArea" layoutX="50.0" layoutY="200.0" prefHeight="80.0" prefWidth="300.0" promptText="Enter project description..." />
+
+        <Label layoutX="370.0" layoutY="180.0" text="Budget:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="budgetTextField" layoutX="370.0" layoutY="200.0" prefWidth="120.0" promptText="0.00" />
+
+        <Label layoutX="370.0" layoutY="230.0" text="Client:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="clientComboBox" layoutX="370.0" layoutY="250.0" prefWidth="150.0" promptText="Select Client" />
+
+        <Button fx:id="addToProjectButton" layoutX="540.0" layoutY="250.0" onAction="#handleAddToProject" prefWidth="120.0" text="Add to Project Table" />
+
+        <Label fx:id="errorLabel" layoutX="50.0" layoutY="290.0" textFill="RED" visible="false">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="310.0" text="Current Projects:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="projectsTable" layoutX="50.0" layoutY="335.0" prefHeight="200.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="40.0" text="ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="150.0" text="Project Name" />
+                <TableColumn fx:id="typeColumn" prefWidth="100.0" text="Type" />
+                <TableColumn fx:id="startDateColumn" prefWidth="80.0" text="Start Date" />
+                <TableColumn fx:id="endDateColumn" prefWidth="80.0" text="End Date" />
+                <TableColumn fx:id="budgetColumn" prefWidth="80.0" text="Budget" />
+                <TableColumn fx:id="priorityColumn" prefWidth="70.0" text="Priority" />
+            </columns>
+        </TableView>
+
+        <Button fx:id="clearFormButton" layoutX="50.0" layoutY="550.0" onAction="#handleClearForm" prefWidth="80.0" text="Clear Form" />
+        <Button fx:id="refreshButton" layoutX="140.0" layoutY="550.0" onAction="#handleRefresh" prefWidth="80.0" text="Refresh" />
+        <Button fx:id="backButton" layoutX="550.0" layoutY="550.0" onAction="#handleBack" prefWidth="100.0" text="Back to Dashboard" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.FreelancerDashboardController">
+
+
+    <Label layoutX="257.0" layoutY="43.0" text="Freelancer Dashboard" textFill="white">
+        <font>
+            <Font name="System Bold" size="28.0" />
+        </font>
+    </Label>
+
+
+    <AnchorPane layoutX="50.0" layoutY="100.0" prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: rgba(255, 255, 255, 0.9); -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 5);">
+
+
+        <Button fx:id="browseJobsButton" layoutX="116.0" layoutY="93.0" onAction="#handleBrowseJobs" prefHeight="40.0" prefWidth="224.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold;" text="Browse Jobs" />
+
+        <Button fx:id="submitProposalButton" layoutX="116.0" layoutY="143.0" onAction="#handleSubmitProposal" prefHeight="40.0" prefWidth="224.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold;" text="Submit Proposal" />
+
+        <Button fx:id="acceptOfferButton" layoutX="116.0" layoutY="193.0" onAction="#handleAcceptOffer" prefHeight="40.0" prefWidth="224.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold;" text="Accept Job Offer" />
+
+        <Button fx:id="communicateButton" layoutX="116.0" layoutY="243.0" onAction="#handleCommunicate" prefHeight="40.0" prefWidth="224.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold;" text="Communicate" />
+
+
+        <Button fx:id="uploadWorkButton" layoutX="360.0" layoutY="93.0" onAction="#handleUploadWork" prefHeight="40.0" prefWidth="224.0" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold;" text="Upload Work" />
+
+        <Button fx:id="trackEarningsButton" layoutX="360.0" layoutY="143.0" onAction="#handleTrackEarnings" prefHeight="40.0" prefWidth="224.0" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold;" text="Track Earnings" />
+
+        <Button fx:id="requestWithdrawalButton" layoutX="360.0" layoutY="193.0" onAction="#handleRequestWithdrawal" prefHeight="40.0" prefWidth="224.0" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold;" text="Request Withdrawal" />
+
+        <Button fx:id="editProfileButton" layoutX="360.0" layoutY="243.0" onAction="#handleEditProfile" prefHeight="40.0" prefWidth="224.0" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold;" text="Edit Profile" />
+
+
+        <Button fx:id="logoutButton" layoutX="580.0" layoutY="380.0" onAction="#handleLogout" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold;" text="Logout" />
+    </AnchorPane>
+
+ 
+    <Label fx:id="statusLabel" layoutX="50.0" layoutY="570.0" prefWidth="700.0" textAlignment="CENTER" textFill="white">
+        <font>
+            <Font size="12.0" />
+        </font>
+    </Label>
+</AnchorPane>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Samira.AdminGenerateReportController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="Generate User Report" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Select Report Criteria:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <CheckBox fx:id="userTypeCheckBox" layoutX="50.0" layoutY="110.0" text="User Type Distribution" textFill="WHITE" />
+        <CheckBox fx:id="statusCheckBox" layoutX="50.0" layoutY="135.0" text="User Status Distribution" textFill="WHITE" />
+        <CheckBox fx:id="joinDateCheckBox" layoutX="50.0" layoutY="160.0" text="Join Date Analysis" textFill="WHITE" />
+        <CheckBox fx:id="activityCheckBox" layoutX="50.0" layoutY="185.0" text="User Activity Level" textFill="WHITE" />
+        <CheckBox fx:id="locationCheckBox" layoutX="50.0" layoutY="210.0" text="Geographic Distribution" textFill="WHITE" />
+        <CheckBox fx:id="projectsCheckBox" layoutX="50.0" layoutY="235.0" text="Projects Completed" textFill="WHITE" />
+
+        <Label layoutX="350.0" layoutY="80.0" text="Date Range (Optional):" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <DatePicker fx:id="startDatePicker" layoutX="350.0" layoutY="105.0" prefWidth="120.0" />
+        <DatePicker fx:id="endDatePicker" layoutX="480.0" layoutY="105.0" prefWidth="120.0" />
+
+        <Label layoutX="350.0" layoutY="140.0" text="Report Format:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <RadioButton fx:id="chartRadioButton" layoutX="350.0" layoutY="165.0" selected="true" text="Charts Only" textFill="WHITE" toggleGroup="$reportFormat" />
+        <RadioButton fx:id="tableRadioButton" layoutX="350.0" layoutY="190.0" text="Table Only" textFill="WHITE" toggleGroup="$reportFormat" />
+        <RadioButton fx:id="bothRadioButton" layoutX="350.0" layoutY="215.0" text="Charts and Table" textFill="WHITE" toggleGroup="$reportFormat" />
+
+        <Label fx:id="errorLabel" layoutX="50.0" layoutY="270.0" textFill="RED" visible="false">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="generateReportButton" layoutX="350.0" layoutY="250.0" onAction="#handleGenerateReport" prefWidth="120.0" text="Create Report" />
+        <Button fx:id="clearSelectionButton" layoutX="480.0" layoutY="250.0" onAction="#handleClearSelection" prefWidth="120.0" text="Clear Selection" />
+
+        <Label layoutX="50.0" layoutY="300.0" text="Report Preview:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <TextArea fx:id="reportPreviewTextArea" editable="false" layoutX="50.0" layoutY="325.0" prefHeight="150.0" prefWidth="600.0" style="-fx-background-color: white; -fx-opacity: 0.9;" />
+
+        <Button fx:id="exportReportButton" layoutX="50.0" layoutY="490.0" onAction="#handleExportReport" prefWidth="100.0" text="Export Report" />
+        <Button fx:id="refreshDataButton" layoutX="160.0" layoutY="490.0" onAction="#handleRefreshData" prefWidth="100.0" text="Refresh Data" />
+        <Button fx:id="backButton" layoutX="550.0" layoutY="490.0" onAction="#handleBack" prefWidth="100.0" text="Back to Dashboard" />
+    </children>
+</AnchorPane>

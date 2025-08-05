@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Samira.PMEditProjectUpdatesController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="Edit Project Updates" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Select Project to Update:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="projectsTable" layoutX="50.0" layoutY="105.0" prefHeight="180.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="projectIdColumn" prefWidth="50.0" text="ID" />
+                <TableColumn fx:id="projectNameColumn" prefWidth="150.0" text="Project Name" />
+                <TableColumn fx:id="currentStatusColumn" prefWidth="100.0" text="Current Status" />
+                <TableColumn fx:id="progressColumn" prefWidth="80.0" text="Progress" />
+                <TableColumn fx:id="deadlineColumn" prefWidth="100.0" text="Deadline" />
+                <TableColumn fx:id="assignedToColumn" prefWidth="120.0" text="Assigned To" />
+            </columns>
+        </TableView>
+
+        <Label fx:id="selectedProjectLabel" layoutX="50.0" layoutY="295.0" text="Selected Project: None" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="320.0" text="Update Project Information:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="350.0" text="Project Status:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="statusComboBox" layoutX="140.0" layoutY="345.0" prefWidth="120.0" promptText="Select Status" />
+
+        <Label layoutX="280.0" layoutY="350.0" text="Progress (%):" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Slider fx:id="progressSlider" layoutX="360.0" layoutY="350.0" max="100.0" prefWidth="150.0" />
+        <Label fx:id="progressLabel" layoutX="520.0" layoutY="350.0" text="0%" textFill="WHITE" />
+
+        <Label layoutX="50.0" layoutY="385.0" text="Priority Level:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="priorityComboBox" layoutX="140.0" layoutY="380.0" prefWidth="120.0" promptText="Priority" />
+
+        <Label layoutX="280.0" layoutY="385.0" text="Quality Rating:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="qualityRatingComboBox" layoutX="380.0" layoutY="380.0" prefWidth="100.0" promptText="Rating" />
+
+        <Label layoutX="50.0" layoutY="420.0" text="Notes for the Change:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="notesTextArea" layoutX="50.0" layoutY="440.0" prefHeight="80.0" prefWidth="400.0" promptText="Enter notes about the changes made..." />
+
+        <CheckBox fx:id="notifyClientCheckBox" layoutX="470.0" layoutY="440.0" text="Notify Client" textFill="WHITE" />
+        <CheckBox fx:id="notifyTeamCheckBox" layoutX="470.0" layoutY="465.0" text="Notify Team Members" textFill="WHITE" />
+        <CheckBox fx:id="updateTimestampCheckBox" layoutX="470.0" layoutY="490.0" selected="true" text="Update Timestamp" textFill="WHITE" />
+
+        <Button fx:id="updateButton" layoutX="470.0" layoutY="520.0" onAction="#handleUpdate" prefWidth="100.0" text="Update Project" />
+        <Button fx:id="previewButton" layoutX="580.0" layoutY="520.0" onAction="#handlePreview" prefWidth="70.0" text="Preview" />
+
+        <Label fx:id="statusLabel" layoutX="50.0" layoutY="535.0" textFill="LIGHTGREEN" visible="false">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="resetButton" layoutX="50.0" layoutY="560.0" onAction="#handleReset" prefWidth="80.0" text="Reset Form" />
+        <Button fx:id="backButton" layoutX="550.0" layoutY="560.0" onAction="#handleBack" prefWidth="100.0" text="Back to Dashboard" />
+    </children>
+</AnchorPane>

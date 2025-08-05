@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Naimur.HandleRefundsController">
+    <children>
+        <Label layoutX="252.0" layoutY="21.0" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: white;" text="Handle Refund Requests" />
+        <Label layoutX="50.0" layoutY="60.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: white;" text="Refund Requests:" />
+        <TableView fx:id="refundRequestsTable" layoutX="50.0" layoutY="90.0" prefHeight="180.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="requestIdColumn" prefWidth="80.0" text="Request ID" />
+                <TableColumn fx:id="clientNameColumn" prefWidth="120.0" text="Client Name" />
+                <TableColumn fx:id="projectNameColumn" prefWidth="130.0" text="Project Name" />
+                <TableColumn fx:id="refundAmountColumn" prefWidth="100.0" text="Amount" />
+                <TableColumn fx:id="requestDateColumn" prefWidth="100.0" text="Request Date" />
+                <TableColumn fx:id="statusColumn" prefWidth="70.0" text="Status" />
+            </columns>
+        </TableView>
+        <Label layoutX="50.0" layoutY="290.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: white;" text="Refund Details:" />
+        <Label layoutX="50.0" layoutY="320.0" style="-fx-text-fill: white;" text="Request ID:" />
+        <TextField fx:id="selectedRequestIdField" editable="false" layoutX="130.0" layoutY="316.0" prefWidth="100.0" />
+        <Label layoutX="250.0" layoutY="320.0" style="-fx-text-fill: white;" text="Client Name:" />
+        <TextField fx:id="selectedClientNameField" editable="false" layoutX="330.0" layoutY="316.0" prefWidth="150.0" />
+        <Label layoutX="500.0" layoutY="320.0" style="-fx-text-fill: white;" text="Amount:" />
+        <TextField fx:id="selectedRefundAmountField" editable="false" layoutX="550.0" layoutY="316.0" prefWidth="100.0" />
+        <Label layoutX="50.0" layoutY="360.0" style="-fx-text-fill: white;" text="Project:" />
+        <TextField fx:id="selectedProjectField" editable="false" layoutX="110.0" layoutY="356.0" prefWidth="200.0" />
+        <Label layoutX="330.0" layoutY="360.0" style="-fx-text-fill: white;" text="Request Date:" />
+        <TextField fx:id="selectedRequestDateField" editable="false" layoutX="420.0" layoutY="356.0" prefWidth="120.0" />
+        <Label layoutX="50.0" layoutY="400.0" style="-fx-text-fill: white;" text="Refund Reason:" />
+        <TextArea fx:id="refundReasonArea" editable="false" layoutX="50.0" layoutY="420.0" prefHeight="60.0" prefWidth="400.0" wrapText="true" />
+        <Label layoutX="470.0" layoutY="400.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: white;" text="Decision:" />
+        <RadioButton fx:id="approveRadio" layoutX="470.0" layoutY="430.0" style="-fx-text-fill: white;" text="Approve" />
+        <RadioButton fx:id="denyRadio" layoutX="470.0" layoutY="460.0" style="-fx-text-fill: white;" text="Deny" />
+        <Label layoutX="50.0" layoutY="500.0" style="-fx-text-fill: white;" text="Decision Reason:" />
+        <TextField fx:id="decisionReasonField" layoutX="160.0" layoutY="496.0" prefWidth="350.0" promptText="Enter reason for decision" />
+        <Button fx:id="updateStatusBtn" layoutX="540.0" layoutY="561.0" onAction="#onUpdateStatus" prefWidth="120.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;" text="Update Status" />
+        <Button fx:id="backBtn" layoutX="51.0" layoutY="561.0" onAction="#onBack" prefWidth="100.0" style="-fx-background-color: #f44336; -fx-text-fill: white;" text="Back" />
+    </children>
+</AnchorPane>

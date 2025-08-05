@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2c3e50;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Shawon.HireFreelancerController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="Hire Freelancer" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Selected Proposal Details:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="110.0" text="Freelancer Name:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="freelancerNameField" layoutX="180.0" layoutY="105.0" editable="false" prefHeight="30.0" prefWidth="200.0" />
+
+        <Label layoutX="400.0" layoutY="110.0" text="Bid Amount:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="bidAmountField" layoutX="500.0" layoutY="105.0" editable="false" prefHeight="30.0" prefWidth="100.0" />
+
+        <Label layoutX="50.0" layoutY="155.0" text="Project Title:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="projectTitleField" layoutX="150.0" layoutY="150.0" editable="false" prefHeight="30.0" prefWidth="450.0" />
+
+        <Label layoutX="50.0" layoutY="200.0" text="Contract Terms:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="230.0" text="Delivery Deadline:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="deliveryDeadlinePicker" layoutX="170.0" layoutY="225.0" prefHeight="30.0" prefWidth="150.0" />
+
+        <Label layoutX="350.0" layoutY="230.0" text="Payment Method:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="paymentMethodCombo" layoutX="460.0" layoutY="225.0" prefHeight="30.0" prefWidth="150.0" promptText="Select method" />
+
+        <Label layoutX="50.0" layoutY="275.0" text="Special Instructions:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="instructionsArea" layoutX="50.0" layoutY="300.0" prefHeight="80.0" prefWidth="550.0" promptText="Add any special instructions for the freelancer" wrapText="true" />
+
+        <CheckBox fx:id="milestonePaymentCheckBox" layoutX="50.0" layoutY="400.0" text="Enable Milestone-based Payment" textFill="WHITE" />
+        <CheckBox fx:id="nondisclosureCheckBox" layoutX="300.0" layoutY="400.0" text="Non-disclosure Agreement" textFill="WHITE" />
+
+        <Label layoutX="50.0" layoutY="440.0" text="Contract Duration:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="fixedTermRadio" layoutX="50.0" layoutY="465.0" text="Fixed Term" textFill="WHITE">
+            <toggleGroup>
+                <ToggleGroup fx:id="durationGroup" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="ongoingRadio" layoutX="150.0" layoutY="465.0" text="Ongoing" textFill="WHITE" toggleGroup="$durationGroup" />
+        <RadioButton fx:id="hourlyRadio" layoutX="250.0" layoutY="465.0" text="Hourly" textFill="WHITE" toggleGroup="$durationGroup" />
+
+        <Button fx:id="confirmHireButton" layoutX="500.0" layoutY="520.0" onAction="#handleConfirmHire" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #27ae60; -fx-text-fill: white;" text="Confirm Hire" />
+        <Button fx:id="cancelButton" layoutX="640.0" layoutY="520.0" onAction="#handleCancel" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #e74c3c; -fx-text-fill: white;" text="Cancel" />
+
+        <Label fx:id="statusLabel" layoutX="50.0" layoutY="535.0" textFill="#f39c12">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

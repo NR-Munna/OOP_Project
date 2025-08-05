@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom, #667eea 0%, #764ba2 100%);" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Adnan.TUpdateTicketStatusController">
+    <children>
+        <Label layoutX="350.0" layoutY="20.0" text="Update Ticket Status" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="ticketsTable" layoutX="50.0" layoutY="70.0" prefHeight="300.0" prefWidth="800.0" style="-fx-background-color: white;">
+            <columns>
+                <TableColumn fx:id="ticketIdCol" prefWidth="100.0" text="Ticket ID" />
+                <TableColumn fx:id="priorityCol" prefWidth="100.0" text="Priority" />
+                <TableColumn fx:id="statusCol" prefWidth="120.0" text="Current Status" />
+                <TableColumn fx:id="subjectCol" prefWidth="250.0" text="Subject" />
+                <TableColumn fx:id="clientCol" prefWidth="120.0" text="Client" />
+                <TableColumn fx:id="assignedToCol" prefWidth="110.0" text="Assigned To" />
+            </columns>
+        </TableView>
+
+        <Label layoutX="50.0" layoutY="400.0" text="Selected Ticket ID:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <TextField fx:id="selectedTicketField" editable="false" layoutX="180.0" layoutY="395.0" prefWidth="150.0" style="-fx-background-color: #f0f0f0;" />
+
+        <Label layoutX="50.0" layoutY="450.0" text="New Status:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <ComboBox fx:id="statusComboBox" layoutX="140.0" layoutY="445.0" prefWidth="150.0" promptText="Select Status" style="-fx-background-color: white;" />
+
+        <Label layoutX="320.0" layoutY="450.0" text="Priority Level:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <ComboBox fx:id="priorityComboBox" layoutX="420.0" layoutY="445.0" prefWidth="120.0" promptText="Priority" style="-fx-background-color: white;" />
+
+        <Label layoutX="50.0" layoutY="500.0" text="Status Update Notes:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <TextArea fx:id="updateNotesArea" layoutX="50.0" layoutY="525.0" prefHeight="80.0" prefWidth="400.0" promptText="Enter status update details and resolution notes..." style="-fx-background-color: white;" />
+
+        <Label layoutX="480.0" layoutY="500.0" text="Resolution Details:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <TextArea fx:id="resolutionDetailsArea" layoutX="480.0" layoutY="525.0" prefHeight="80.0" prefWidth="370.0" promptText="Enter resolution details if ticket is being resolved..." style="-fx-background-color: white;" />
+
+        <Button fx:id="updateStatusBtn" layoutX="350.0" layoutY="630.0" onAction="#handleUpdateStatus" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 5;" text="Update Status" />
+
+        <Button fx:id="clearBtn" layoutX="490.0" layoutY="630.0" onAction="#handleClear" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #FF9800; -fx-text-fill: white; -fx-background-radius: 5;" text="Clear" />
+
+        <Button fx:id="backBtn" layoutX="750.0" layoutY="630.0" onAction="#handleBack" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #9E9E9E; -fx-text-fill: white; -fx-background-radius: 5;" text="Back" />
+    </children>
+</AnchorPane>

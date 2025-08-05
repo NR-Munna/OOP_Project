@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Samira.PMArchiveProjectsController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="Archive Completed Projects" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Completed Projects:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="105.0" text="Filter:" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="filterComboBox" layoutX="95.0" layoutY="100.0" prefWidth="120.0" promptText="All Completed" />
+        <Button fx:id="refreshButton" layoutX="225.0" layoutY="100.0" onAction="#handleRefresh" prefWidth="80.0" text="Refresh" />
+
+        <TableView fx:id="completedProjectsTable" layoutX="50.0" layoutY="130.0" prefHeight="180.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="selectColumn" prefWidth="50.0" text="Select" />
+                <TableColumn fx:id="projectIdColumn" prefWidth="50.0" text="ID" />
+                <TableColumn fx:id="projectNameColumn" prefWidth="150.0" text="Project Name" />
+                <TableColumn fx:id="clientColumn" prefWidth="100.0" text="Client" />
+                <TableColumn fx:id="completionDateColumn" prefWidth="100.0" text="Completed" />
+                <TableColumn fx:id="budgetColumn" prefWidth="80.0" text="Budget" />
+                <TableColumn fx:id="deliverableStatusColumn" prefWidth="70.0" text="Deliverables" />
+            </columns>
+        </TableView>
+
+        <Button fx:id="selectAllButton" layoutX="50.0" layoutY="320.0" onAction="#handleSelectAll" prefWidth="80.0" text="Select All" />
+        <Button fx:id="clearSelectionButton" layoutX="140.0" layoutY="320.0" onAction="#handleClearSelection" prefWidth="100.0" text="Clear Selection" />
+
+        <Label fx:id="selectedCountLabel" layoutX="250.0" layoutY="325.0" text="Selected: 0 projects" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="355.0" text="Verification Checklist:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <CheckBox fx:id="deliverablesCheckBox" layoutX="50.0" layoutY="380.0" text="All deliverables submitted and approved" textFill="WHITE" />
+        <CheckBox fx:id="paymentsCheckBox" layoutX="50.0" layoutY="405.0" text="All payments processed" textFill="WHITE" />
+        <CheckBox fx:id="feedbackCheckBox" layoutX="50.0" layoutY="430.0" text="Client feedback collected" textFill="WHITE" />
+        <CheckBox fx:id="documentsCheckBox" layoutX="50.0" layoutY="455.0" text="Project documents organized" textFill="WHITE" />
+
+        <CheckBox fx:id="teamFeedbackCheckBox" layoutX="350.0" layoutY="380.0" text="Team performance evaluated" textFill="WHITE" />
+        <CheckBox fx:id="lessonsLearnedCheckBox" layoutX="350.0" layoutY="405.0" text="Lessons learned documented" textFill="WHITE" />
+        <CheckBox fx:id="resourcesCheckBox" layoutX="350.0" layoutY="430.0" text="Resources deallocated" textFill="WHITE" />
+        <CheckBox fx:id="backupCheckBox" layoutX="350.0" layoutY="455.0" text="Project files backed up" textFill="WHITE" />
+
+        <Label layoutX="50.0" layoutY="485.0" text="Archive Notes:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="archiveNotesTextField" layoutX="50.0" layoutY="505.0" prefWidth="350.0" promptText="Optional notes for archiving..." />
+
+        <Button fx:id="verifyButton" layoutX="420.0" layoutY="485.0" onAction="#handleVerify" prefWidth="100.0" text="Verify All" />
+        <Button fx:id="archiveButton" layoutX="420.0" layoutY="515.0" onAction="#handleArchive" prefWidth="100.0" text="Archive Projects" />
+
+        <Label fx:id="statusLabel" layoutX="50.0" layoutY="535.0" textFill="LIGHTGREEN" visible="false">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="viewArchivedButton" layoutX="350.0" layoutY="560.0" onAction="#handleViewArchived" prefWidth="120.0" text="View Archived" />
+        <Button fx:id="backButton" layoutX="550.0" layoutY="560.0" onAction="#handleBack" prefWidth="100.0" text="Back to Dashboard" />
+    </children>
+</AnchorPane>

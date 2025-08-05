@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Samira.PMAssignFreelancersController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="Assign Freelancers to Projects" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Select Project:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="projectsTable" layoutX="50.0" layoutY="105.0" prefHeight="120.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="projectIdColumn" prefWidth="50.0" text="ID" />
+                <TableColumn fx:id="projectNameColumn" prefWidth="200.0" text="Project Name" />
+                <TableColumn fx:id="skillsRequiredColumn" prefWidth="150.0" text="Skills Required" />
+                <TableColumn fx:id="budgetColumn" prefWidth="100.0" text="Budget" />
+                <TableColumn fx:id="deadlineColumn" prefWidth="100.0" text="Deadline" />
+            </columns>
+        </TableView>
+
+        <Button fx:id="assignFreelancerButton" layoutX="550.0" layoutY="235.0" onAction="#handleAssignFreelancer" prefWidth="100.0" text="Assign Freelancer" />
+
+        <Label fx:id="selectedProjectLabel" layoutX="50.0" layoutY="240.0" text="Selected: None" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="270.0" text="Available Freelancers:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="295.0" text="Filter by Skills:" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="skillFilterTextField" layoutX="140.0" layoutY="290.0" prefWidth="150.0" promptText="e.g., Java, Python" />
+        <Button fx:id="filterButton" layoutX="300.0" layoutY="290.0" onAction="#handleFilter" prefWidth="60.0" text="Filter" />
+
+        <TableView fx:id="freelancersTable" layoutX="50.0" layoutY="320.0" prefHeight="180.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="freelancerIdColumn" prefWidth="50.0" text="ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="120.0" text="Name" />
+                <TableColumn fx:id="skillsColumn" prefWidth="150.0" text="Skills" />
+                <TableColumn fx:id="ratingColumn" prefWidth="80.0" text="Rating" />
+                <TableColumn fx:id="hourlyRateColumn" prefWidth="80.0" text="Rate/Hr" />
+                <TableColumn fx:id="availabilityColumn" prefWidth="120.0" text="Availability" />
+            </columns>
+        </TableView>
+
+        <Label fx:id="selectedFreelancerLabel" layoutX="50.0" layoutY="510.0" text="Selected Freelancer: None" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="300.0" layoutY="510.0" text="Assignment Notes:" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="assignmentNotesTextField" layoutX="300.0" layoutY="530.0" prefWidth="200.0" promptText="Optional notes..." />
+
+        <Button fx:id="assignButton" layoutX="520.0" layoutY="530.0" onAction="#handleAssign" prefWidth="80.0" text="Assign" />
+
+        <Label fx:id="statusLabel" layoutX="50.0" layoutY="560.0" textFill="LIGHTGREEN" visible="false">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="backButton" layoutX="550.0" layoutY="560.0" onAction="#handleBack" prefWidth="100.0" text="Back to Dashboard" />
+    </children>
+</AnchorPane>

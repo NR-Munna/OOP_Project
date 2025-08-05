@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2c3e50;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Shawon.TrackEarningsController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="Earnings Dashboard" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Earnings Summary:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="110.0" text="Total Earnings:" textFill="WHITE" />
+        <TextField fx:id="totalEarningsField" editable="false" layoutX="160.0" layoutY="105.0" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #27ae60; -fx-text-fill: white;" />
+
+        <Label layoutX="300.0" layoutY="110.0" text="Available Balance:" textFill="WHITE" />
+        <TextField fx:id="availableBalanceField" editable="false" layoutX="430.0" layoutY="105.0" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #3498db; -fx-text-fill: white;" />
+
+        <Label layoutX="570.0" layoutY="110.0" text="Pending Payments:" textFill="WHITE" />
+        <TextField fx:id="pendingPaymentsField" editable="false" layoutX="690.0" layoutY="105.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #f39c12; -fx-text-fill: white;" />
+
+        <Label layoutX="50.0" layoutY="155.0" text="Filter by Period:" textFill="WHITE" />
+        <ComboBox fx:id="periodCombo" layoutX="160.0" layoutY="150.0" onAction="#handlePeriodFilter" prefHeight="30.0" prefWidth="120.0" promptText="All Time" />
+
+        <Button fx:id="refreshButton" layoutX="300.0" layoutY="150.0" onAction="#handleRefresh" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #3498db; -fx-text-fill: white;" text="Refresh" />
+        <Button fx:id="withdrawButton" layoutX="400.0" layoutY="150.0" onAction="#handleWithdraw" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #27ae60; -fx-text-fill: white;" text="Withdraw Funds" />
+
+        <Label layoutX="50.0" layoutY="195.0" text="Earnings History:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="earningsTable" layoutX="50.0" layoutY="220.0" prefHeight="250.0" prefWidth="700.0">
+            <columns>
+                <TableColumn fx:id="projectColumn" prefWidth="200.0" text="Project" />
+                <TableColumn fx:id="clientColumn" prefWidth="120.0" text="Client" />
+                <TableColumn fx:id="amountColumn" prefWidth="100.0" text="Amount" />
+                <TableColumn fx:id="statusColumn" prefWidth="100.0" text="Status" />
+                <TableColumn fx:id="dateColumn" prefWidth="100.0" text="Date" />
+                <TableColumn fx:id="feeColumn" prefWidth="80.0" text="Platform Fee" />
+            </columns>
+        </TableView>
+
+        <Label layoutX="50.0" layoutY="485.0" text="Monthly Statistics:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="515.0" text="This Month:" textFill="WHITE" />
+        <TextField fx:id="thisMonthField" editable="false" layoutX="140.0" layoutY="510.0" prefHeight="25.0" prefWidth="100.0" />
+
+        <Label layoutX="260.0" layoutY="515.0" text="Projects Completed:" textFill="WHITE" />
+        <TextField fx:id="completedProjectsField" editable="false" layoutX="390.0" layoutY="510.0" prefHeight="25.0" prefWidth="60.0" />
+
+        <Label layoutX="470.0" layoutY="515.0" text="Average per Project:" textFill="WHITE" />
+        <TextField fx:id="averageField" editable="false" layoutX="600.0" layoutY="510.0" prefHeight="25.0" prefWidth="100.0" />
+
+        <Label layoutX="50.0" layoutY="545.0" text="Success Rate:" textFill="WHITE" />
+        <TextField fx:id="successRateField" editable="false" layoutX="140.0" layoutY="540.0" prefHeight="25.0" prefWidth="80.0" />
+        <Button fx:id="backButton" layoutX="730.0" layoutY="540.0" onAction="#handleBack" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: #95a5a6; -fx-text-fill: white;" text="Back" />
+    </children>
+</AnchorPane>

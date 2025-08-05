@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2c3e50;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Shawon.PostJobController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="Post New Job" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Job Title:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="jobTitleField" layoutX="50.0" layoutY="105.0" prefHeight="30.0" prefWidth="700.0" promptText="Enter job title" />
+
+        <Label layoutX="50.0" layoutY="150.0" text="Job Description:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="jobDescriptionArea" layoutX="50.0" layoutY="175.0" prefHeight="120.0" prefWidth="700.0" promptText="Describe the job requirements and details" wrapText="true" />
+
+        <Label layoutX="50.0" layoutY="310.0" text="Required Skills:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="skillsField" layoutX="50.0" layoutY="335.0" prefHeight="30.0" prefWidth="700.0" promptText="Enter required skills" />
+
+        <Label layoutX="50.0" layoutY="380.0" text="Budget ($):" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="budgetField" layoutX="50.0" layoutY="405.0" prefHeight="30.0" prefWidth="200.0" promptText="Enter budget amount" />
+
+        <Label layoutX="300.0" layoutY="380.0" text="Deadline:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="deadlinePicker" layoutX="300.0" layoutY="405.0" prefHeight="30.0" prefWidth="200.0" />
+
+        <Label layoutX="550.0" layoutY="380.0" text="Project Type:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="projectTypeCombo" layoutX="550.0" layoutY="405.0" prefHeight="30.0" prefWidth="200.0" promptText="Select project type" />
+
+        <CheckBox fx:id="urgentCheckBox" layoutX="50.0" layoutY="460.0" text="Urgent Project" textFill="WHITE" />
+        <CheckBox fx:id="remoteCheckBox" layoutX="200.0" layoutY="460.0" text="Remote Work" textFill="WHITE" />
+
+        <Button fx:id="postJobButton" layoutX="550.0" layoutY="500.0" onAction="#handlePostJob" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #27ae60; -fx-text-fill: white;" text="Post Job" />
+        <Button fx:id="cancelButton" layoutX="670.0" layoutY="500.0" onAction="#handleCancel" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #e74c3c; -fx-text-fill: white;" text="Cancel" />
+
+        <Label fx:id="statusLabel" layoutX="50.0" layoutY="515.0" textFill="#f39c12">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

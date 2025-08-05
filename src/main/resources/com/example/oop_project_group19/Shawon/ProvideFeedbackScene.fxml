@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2c3e50;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Shawon.ProvideFeedbackController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="Provide Feedback" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Select Completed Project:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="completedProjectCombo" layoutX="50.0" layoutY="105.0" onAction="#handleProjectSelection" prefHeight="30.0" prefWidth="400.0" promptText="Select a completed project" />
+
+        <Label layoutX="50.0" layoutY="150.0" text="Project Details:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="180.0" text="Freelancer:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="freelancerNameField" editable="false" layoutX="130.0" layoutY="175.0" prefHeight="30.0" prefWidth="200.0" />
+
+        <Label layoutX="350.0" layoutY="180.0" text="Project Title:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="projectTitleField" editable="false" layoutX="440.0" layoutY="175.0" prefHeight="30.0" prefWidth="300.0" />
+
+        <Label layoutX="50.0" layoutY="220.0" text="Completion Date:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="completionDateField" editable="false" layoutX="170.0" layoutY="215.0" prefHeight="30.0" prefWidth="150.0" />
+
+        <Label layoutX="350.0" layoutY="220.0" text="Project Duration:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="projectDurationField" editable="false" layoutX="470.0" layoutY="215.0" prefHeight="30.0" prefWidth="150.0" />
+
+        <Label layoutX="50.0" layoutY="270.0" text="Rate Your Experience:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="300.0" text="Overall Rating (1-5 stars):" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="rating1Radio" layoutX="220.0" layoutY="300.0" text="1 ★" textFill="WHITE">
+            <toggleGroup>
+                <ToggleGroup fx:id="ratingGroup" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="rating2Radio" layoutX="280.0" layoutY="300.0" text="2 ★★" textFill="WHITE" toggleGroup="$ratingGroup" />
+        <RadioButton fx:id="rating3Radio" layoutX="350.0" layoutY="300.0" text="3 ★★★" textFill="WHITE" toggleGroup="$ratingGroup" />
+        <RadioButton fx:id="rating4Radio" layoutX="430.0" layoutY="300.0" text="4 ★★★★" textFill="WHITE" toggleGroup="$ratingGroup" />
+        <RadioButton fx:id="rating5Radio" layoutX="520.0" layoutY="300.0" text="5 ★★★★★" textFill="WHITE" toggleGroup="$ratingGroup" />
+
+        <Label layoutX="50.0" layoutY="340.0" text="Category Ratings:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="370.0" text="Quality of Work:" textFill="WHITE" />
+        <ComboBox fx:id="qualityRatingCombo" layoutX="160.0" layoutY="365.0" prefHeight="30.0" prefWidth="80.0" promptText="1-5" />
+
+        <Label layoutX="260.0" layoutY="370.0" text="Communication:" textFill="WHITE" />
+        <ComboBox fx:id="communicationRatingCombo" layoutX="360.0" layoutY="365.0" prefHeight="30.0" prefWidth="80.0" promptText="1-5" />
+
+        <Label layoutX="460.0" layoutY="370.0" text="Timeliness:" textFill="WHITE" />
+        <ComboBox fx:id="timelinessRatingCombo" layoutX="540.0" layoutY="365.0" prefHeight="30.0" prefWidth="80.0" promptText="1-5" />
+
+        <Label layoutX="50.0" layoutY="410.0" text="Written Review:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="reviewTextArea" layoutX="50.0" layoutY="435.0" prefHeight="100.0" prefWidth="600.0" promptText="Share your experience working with this freelancer..." wrapText="true" />
+
+        <CheckBox fx:id="recommendCheckBox" layoutX="50.0" layoutY="550.0" text="I would recommend this freelancer to others" textFill="WHITE" />
+        <CheckBox fx:id="publicReviewCheckBox" layoutX="350.0" layoutY="550.0" text="Make this review public" textFill="WHITE" />
+
+        <Button fx:id="submitFeedbackButton" layoutX="580.0" layoutY="545.0" onAction="#handleSubmitFeedback" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #27ae60; -fx-text-fill: white;" text="Submit Feedback" />
+        <Button fx:id="backButton" layoutX="720.0" layoutY="545.0" onAction="#handleBack" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: #95a5a6; -fx-text-fill: white;" text="Back" />
+
+        <Label fx:id="statusLabel" layoutX="670.0" layoutY="370.0" textFill="#f39c12">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

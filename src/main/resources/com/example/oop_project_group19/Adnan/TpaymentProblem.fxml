@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom, #667eea, #764ba2);" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Adnan.TPaymentProblemsController">
+    <children>
+        <Label layoutX="350.0" layoutY="20.0" text="Payment Issues Queue" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="70.0" text="Issue Status:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <RadioButton fx:id="allIssuesRadio" layoutX="150.0" layoutY="70.0" selected="true" text="All Issues" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="issueStatusGroup" />
+         </toggleGroup>
+        </RadioButton>
+
+        <RadioButton fx:id="pendingIssuesRadio" layoutX="230.0" layoutY="70.0" text="Pending" textFill="WHITE" toggleGroup="$issueStatusGroup">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </RadioButton>
+
+        <RadioButton fx:id="inProgressIssuesRadio" layoutX="300.0" layoutY="70.0" text="In Progress" textFill="WHITE" toggleGroup="$issueStatusGroup">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </RadioButton>
+
+        <RadioButton fx:id="resolvedIssuesRadio" layoutX="390.0" layoutY="70.0" text="Resolved" textFill="WHITE" toggleGroup="$issueStatusGroup">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </RadioButton>
+
+        <Button fx:id="filterBtn" layoutX="480.0" layoutY="68.0" onAction="#handleFilter" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #4facfe; -fx-background-radius: 5; -fx-text-fill: white;" text="Filter" />
+
+        <TableView fx:id="paymentIssuesTable" layoutX="50.0" layoutY="110.0" prefHeight="280.0" prefWidth="800.0" style="-fx-background-color: rgba(255,255,255,0.9); -fx-background-radius: 10;">
+            <columns>
+                <TableColumn fx:id="issueIdColumn" prefWidth="80.0" text="Issue ID" />
+                <TableColumn fx:id="userIdColumn" prefWidth="80.0" text="User ID" />
+                <TableColumn fx:id="usernameColumn" prefWidth="120.0" text="Username" />
+                <TableColumn fx:id="transactionIdColumn" prefWidth="120.0" text="Transaction ID" />
+                <TableColumn fx:id="amountColumn" prefWidth="80.0" text="Amount" />
+                <TableColumn fx:id="issueTypeColumn" prefWidth="100.0" text="Issue Type" />
+                <TableColumn fx:id="timestampColumn" prefWidth="130.0" text="Timestamp" />
+                <TableColumn fx:id="statusColumn" prefWidth="90.0" text="Status" />
+            </columns>
+        </TableView>
+
+        <Label layoutX="50.0" layoutY="410.0" text="Selected Payment Issue Details:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="440.0" text="Transaction ID:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="selectedTransactionIdField" editable="false" layoutX="150.0" layoutY="437.0" prefWidth="150.0" style="-fx-background-color: rgba(255,255,255,0.8); -fx-background-radius: 5;" />
+
+        <Label layoutX="320.0" layoutY="440.0" text="Amount:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="selectedAmountField" editable="false" layoutX="380.0" layoutY="437.0" prefWidth="100.0" style="-fx-background-color: rgba(255,255,255,0.8); -fx-background-radius: 5;" />
+
+        <Label layoutX="500.0" layoutY="440.0" text="Payment Method:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="paymentMethodField" editable="false" layoutX="620.0" layoutY="437.0" prefWidth="120.0" style="-fx-background-color: rgba(255,255,255,0.8); -fx-background-radius: 5;" />
+
+        <Label layoutX="50.0" layoutY="480.0" text="Issue Description:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="issueDescriptionArea" editable="false" layoutX="50.0" layoutY="500.0" prefHeight="60.0" prefWidth="400.0" style="-fx-background-color: rgba(255,255,255,0.8); -fx-background-radius: 5;" wrapText="true" />
+
+        <Label layoutX="50.0" layoutY="580.0" text="Investigation Status:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="investigationStatusCombo" layoutX="180.0" layoutY="580.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: rgba(255,255,255,0.8); -fx-background-radius: 5;" />
+
+        <Label layoutX="50.0" layoutY="620.0" text="Resolution Notes:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="resolutionNotesField" layoutX="180.0" layoutY="616.0" prefWidth="200.0" style="-fx-background-color: rgba(255,255,255,0.8); -fx-background-radius: 5;" />
+
+        <Button fx:id="checkTransactionBtn" layoutX="620.0" layoutY="510.0" onAction="#handleCheckTransaction" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #007bff; -fx-background-radius: 5; -fx-text-fill: white;" text="Check Transaction" />
+
+        <Button fx:id="refundBtn" layoutX="620.0" layoutY="550.0" onAction="#handleRefund" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ffc107; -fx-background-radius: 5; -fx-text-fill: black;" text="Process Refund" />
+
+        <Button fx:id="resolvedBtn" layoutX="620.0" layoutY="590.0" onAction="#handleMarkResolved" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #28a745; -fx-background-radius: 5; -fx-text-fill: white;" text="Mark Resolved" />
+    </children>
+</AnchorPane>

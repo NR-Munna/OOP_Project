@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2c3e50;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Shawon.BrowseJobsController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="Browse Available Jobs" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Filter Jobs:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="105.0" text="Category:" textFill="WHITE" />
+        <ComboBox fx:id="categoryCombo" layoutX="120.0" layoutY="100.0" prefHeight="30.0" prefWidth="150.0" promptText="All Categories" />
+
+        <Label layoutX="290.0" layoutY="105.0" text="Budget Range:" textFill="WHITE" />
+        <TextField fx:id="minBudgetField" layoutX="380.0" layoutY="100.0" prefHeight="30.0" prefWidth="80.0" promptText="Min $" />
+        <TextField fx:id="maxBudgetField" layoutX="470.0" layoutY="100.0" prefHeight="30.0" prefWidth="80.0" promptText="Max $" />
+
+        <Label layoutX="570.0" layoutY="105.0" text="Skills:" textFill="WHITE" />
+        <TextField fx:id="skillsFilterField" layoutX="620.0" layoutY="100.0" prefHeight="30.0" prefWidth="130.0" promptText="Enter skills" />
+
+        <Button fx:id="searchButton" layoutX="680.0" layoutY="140.0" onAction="#handleSearch" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #3498db; -fx-text-fill: white;" text="Search" />
+        <Button fx:id="clearButton" layoutX="600.0" layoutY="140.0" onAction="#handleClear" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #95a5a6; -fx-text-fill: white;" text="Clear" />
+
+        <Label layoutX="50.0" layoutY="185.0" text="Available Jobs:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="jobsTable" layoutX="50.0" layoutY="210.0" prefHeight="280.0" prefWidth="700.0">
+            <columns>
+                <TableColumn fx:id="jobTitleColumn" prefWidth="200.0" text="Job Title" />
+                <TableColumn fx:id="clientColumn" prefWidth="120.0" text="Client" />
+                <TableColumn fx:id="budgetColumn" prefWidth="80.0" text="Budget" />
+                <TableColumn fx:id="deadlineColumn" prefWidth="100.0" text="Deadline" />
+                <TableColumn fx:id="skillsColumn" prefWidth="150.0" text="Required Skills" />
+                <TableColumn fx:id="postedDateColumn" prefWidth="100.0" text="Posted" />
+            </columns>
+        </TableView>
+
+        <Label layoutX="50.0" layoutY="510.0" text="Job Description:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="jobDescriptionArea" layoutX="50.0" layoutY="535.0" editable="false" prefHeight="50.0" prefWidth="500.0" style="-fx-background-color: #34495e; -fx-text-fill: white;" wrapText="true" />
+
+        <Button fx:id="submitProposalButton" layoutX="570.0" layoutY="535.0" onAction="#handleSubmitProposal" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #27ae60; -fx-text-fill: white;" text="Submit Proposal" />
+        <Button fx:id="backButton" layoutX="700.0" layoutY="535.0" onAction="#handleBack" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: #95a5a6; -fx-text-fill: white;" text="Back" />
+    </children>
+</AnchorPane>

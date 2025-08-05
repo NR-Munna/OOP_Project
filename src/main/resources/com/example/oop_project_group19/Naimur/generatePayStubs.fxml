@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Naimur.GeneratePayStubsController">
+    <children>
+        <Label layoutX="280.0" layoutY="20.0" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: white;" text="Generate Pay Stubs" />
+        <TableView fx:id="freelancerTable" layoutX="50.0" layoutY="60.0" prefHeight="150.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="freelancerIdColumn" prefWidth="100.0" text="ID" />
+                <TableColumn fx:id="freelancerNameColumn" prefWidth="200.0" text="Freelancer Name" />
+                <TableColumn fx:id="skillsColumn" prefWidth="150.0" text="Skills" />
+                <TableColumn fx:id="emailColumn" prefWidth="150.0" text="Email" />
+            </columns>
+        </TableView>
+        <Label layoutX="50.0" layoutY="230.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: white;" text="Payment Details:" />
+        <Label layoutX="50.0" layoutY="260.0" style="-fx-text-fill: white;" text="Freelancer Name:" />
+        <TextField fx:id="selectedFreelancerField" editable="false" layoutX="170.0" layoutY="256.0" prefWidth="200.0" />
+        <Label layoutX="380.0" layoutY="260.0" style="-fx-text-fill: white;" text="Payment Amount:" />
+        <TextField fx:id="paymentAmountField" layoutX="490.0" layoutY="256.0" prefWidth="120.0" promptText="Enter amount" />
+        <Label layoutX="50.0" layoutY="300.0" style="-fx-text-fill: white;" text="Project Name:" />
+        <TextField fx:id="projectNameField" layoutX="150.0" layoutY="296.0" prefWidth="200.0" promptText="Enter project name" />
+        <Label layoutX="370.0" layoutY="300.0" style="-fx-text-fill: white;" text="Payment Date:" />
+        <DatePicker fx:id="paymentDatePicker" layoutX="460.0" layoutY="296.0" prefWidth="150.0" />
+        <Label layoutX="50.0" layoutY="340.0" style="-fx-text-fill: white;" text="Work Hours:" />
+        <TextField fx:id="workHoursField" layoutX="130.0" layoutY="336.0" prefWidth="100.0" promptText="Hours" />
+        <Label layoutX="250.0" layoutY="340.0" style="-fx-text-fill: white;" text="Hourly Rate:" />
+        <TextField fx:id="hourlyRateField" layoutX="330.0" layoutY="336.0" prefWidth="100.0" promptText="Rate" />
+        <Button fx:id="generatePayStubBtn" layoutX="250.0" layoutY="380.0" onAction="#onGeneratePayStub" prefHeight="25.0" prefWidth="157.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;" text="Generate Pay Stub" />
+        <TextArea fx:id="payStubDisplayArea" editable="false" layoutX="50.0" layoutY="420.0" prefHeight="120.0" prefWidth="600.0" style="-fx-background-color: white;" wrapText="true" />
+        <Button fx:id="saveBtn" layoutX="560.0" layoutY="550.0" onAction="#onSave" prefWidth="100.0" style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="Save as PDF" />
+        <Button fx:id="backBtn" layoutX="50.0" layoutY="550.0" onAction="#onBack" prefWidth="100.0" style="-fx-background-color: #f44336; -fx-text-fill: white;" text="Back" />
+    </children>
+</AnchorPane>

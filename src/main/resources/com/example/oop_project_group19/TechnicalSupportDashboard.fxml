@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom, #667eea, #764ba2);" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.TechnicalSupportDashboardController">
+    <children>
+        <Label layoutX="280.0" layoutY="30.0" text="Technical Support Dashboard" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="28.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="viewTicketQueueBtn" layoutX="150.0" layoutY="150.0" onAction="#handleViewTicketQueue" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #4facfe; -fx-background-radius: 10; -fx-text-fill: white;" text="View Ticket Queue">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+
+        <Button fx:id="updateTicketStatusBtn" layoutX="550.0" layoutY="150.0" onAction="#handleUpdateTicketStatus" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #4facfe; -fx-background-radius: 10; -fx-text-fill: white;" text="Update Ticket Status">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+
+        <Button fx:id="passwordResetBtn" layoutX="150.0" layoutY="230.0" onAction="#handlePasswordReset" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #4facfe; -fx-background-radius: 10; -fx-text-fill: white;" text="Password Reset Requests">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+
+        <Button fx:id="reviewsComplaintsBtn" layoutX="550.0" layoutY="230.0" onAction="#handleReviewsComplaints" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #4facfe; -fx-background-radius: 10; -fx-text-fill: white;" text="User Reviews &amp; Complaints">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+
+        <Button fx:id="monitorActivityBtn" layoutX="150.0" layoutY="310.0" onAction="#handleMonitorActivity" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #4facfe; -fx-background-radius: 10; -fx-text-fill: white;" text="Monitor User Activity">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+
+        <Button fx:id="paymentProblemsBtn" layoutX="550.0" layoutY="310.0" onAction="#handlePaymentProblems" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #4facfe; -fx-background-radius: 10; -fx-text-fill: white;" text="Handle Payment Problems">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+
+        <Button fx:id="bugReportsBtn" layoutX="150.0" layoutY="390.0" onAction="#handleBugReports" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #4facfe; -fx-background-radius: 10; -fx-text-fill: white;" text="Create Bug Reports">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+
+        <Button fx:id="chatSupportBtn" layoutX="550.0" layoutY="390.0" onAction="#handleChatSupport" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #4facfe; -fx-background-radius: 10; -fx-text-fill: white;" text="Provide Chat Support">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+
+        <Button fx:id="logoutBtn" layoutX="400.0" layoutY="500.0" onAction="#handleLogout" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #ff6b6b; -fx-background-radius: 8; -fx-text-fill: white;" text="Logout">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

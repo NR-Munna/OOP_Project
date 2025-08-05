@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Samira.PMManageDeadlinesController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="Manage Project Deadlines" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Projects with Upcoming Deadlines:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="105.0" text="Filter by:" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="filterComboBox" layoutX="110.0" layoutY="100.0" prefWidth="120.0" promptText="All Projects" />
+        <Button fx:id="refreshButton" layoutX="240.0" layoutY="100.0" onAction="#handleRefresh" prefWidth="80.0" text="Refresh" />
+
+        <TableView fx:id="deadlinesTable" layoutX="50.0" layoutY="130.0" prefHeight="220.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="projectIdColumn" prefWidth="50.0" text="ID" />
+                <TableColumn fx:id="projectNameColumn" prefWidth="150.0" text="Project Name" />
+                <TableColumn fx:id="currentDeadlineColumn" prefWidth="100.0" text="Current Deadline" />
+                <TableColumn fx:id="statusColumn" prefWidth="80.0" text="Status" />
+                <TableColumn fx:id="daysLeftColumn" prefWidth="80.0" text="Days Left" />
+                <TableColumn fx:id="priorityColumn" prefWidth="70.0" text="Priority" />
+                <TableColumn fx:id="assignedToColumn" prefWidth="70.0" text="Assigned To" />
+            </columns>
+        </TableView>
+
+        <Label layoutX="50.0" layoutY="365.0" text="Modify Deadline:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <Label fx:id="selectedProjectLabel" layoutX="50.0" layoutY="390.0" text="Selected Project: None" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="420.0" text="New Deadline:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="newDeadlineDatePicker" layoutX="140.0" layoutY="415.0" prefWidth="150.0" />
+
+        <Label layoutX="310.0" layoutY="420.0" text="Reason for Change:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="reasonTextField" layoutX="310.0" layoutY="440.0" prefWidth="200.0" promptText="Enter reason..." />
+
+        <CheckBox fx:id="notifyTeamCheckBox" layoutX="50.0" layoutY="450.0" text="Notify assigned team members" textFill="WHITE" />
+
+        <Label layoutX="50.0" layoutY="480.0" text="Additional Notes:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="notesTextArea" layoutX="50.0" layoutY="500.0" prefHeight="60.0" prefWidth="350.0" promptText="Optional additional notes..." />
+
+        <Button fx:id="updateDeadlineButton" layoutX="420.0" layoutY="500.0" onAction="#handleUpdateDeadline" prefWidth="120.0" text="Update Deadline" />
+        <Button fx:id="cancelButton" layoutX="420.0" layoutY="530.0" onAction="#handleCancel" prefWidth="120.0" text="Cancel Changes" />
+
+        <Label fx:id="statusLabel" layoutX="50.0" layoutY="575.0" textFill="LIGHTGREEN" visible="false">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="backButton" layoutX="550.0" layoutY="570.0" onAction="#handleBack" prefWidth="100.0" text="Back to Dashboard" />
+    </children>
+</AnchorPane>

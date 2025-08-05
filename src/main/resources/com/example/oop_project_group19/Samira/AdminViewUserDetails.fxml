@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Samira.AdminViewUserDetailsController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="View User Details" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Select User:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="usersTable" layoutX="50.0" layoutY="105.0" prefHeight="200.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="60.0" text="ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="200.0" text="Name" />
+                <TableColumn fx:id="typeColumn" prefWidth="150.0" text="Type" />
+                <TableColumn fx:id="statusColumn" prefWidth="190.0" text="Status" />
+            </columns>
+        </TableView>
+
+        <Button fx:id="viewDetailsButton" layoutX="550.0" layoutY="315.0" onAction="#handleViewDetails" prefWidth="100.0" text="View Details" />
+
+        <Label layoutX="50.0" layoutY="350.0" text="User Details:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <TextArea fx:id="userDetailsTextArea" editable="false" layoutX="50.0" layoutY="375.0" prefHeight="120.0" prefWidth="450.0" style="-fx-background-color: white; -fx-opacity: 0.9;" />
+
+        <Label layoutX="520.0" layoutY="375.0" text="Additional Info:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <Label fx:id="joinDateLabel" layoutX="520.0" layoutY="400.0" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+
+        <Label fx:id="lastActiveLabel" layoutX="520.0" layoutY="420.0" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+
+        <Label fx:id="projectCountLabel" layoutX="520.0" layoutY="440.0" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="refreshButton" layoutX="50.0" layoutY="510.0" onAction="#handleRefresh" prefWidth="80.0" text="Refresh" />
+        <Button fx:id="backButton" layoutX="550.0" layoutY="510.0" onAction="#handleBack" prefWidth="100.0" text="Back to Dashboard" />
+    </children>
+</AnchorPane>

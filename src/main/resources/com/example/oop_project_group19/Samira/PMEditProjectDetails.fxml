@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Samira.PMEditProjectDetailsController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="Add or Edit Project Details" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Select Project to Edit:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="projectsTable" layoutX="50.0" layoutY="105.0" prefHeight="120.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="projectIdColumn" prefWidth="50.0" text="ID" />
+                <TableColumn fx:id="titleColumn" prefWidth="180.0" text="Title" />
+                <TableColumn fx:id="clientColumn" prefWidth="120.0" text="Client" />
+                <TableColumn fx:id="statusColumn" prefWidth="80.0" text="Status" />
+                <TableColumn fx:id="budgetColumn" prefWidth="80.0" text="Budget" />
+                <TableColumn fx:id="deadlineColumn" prefWidth="90.0" text="Deadline" />
+            </columns>
+        </TableView>
+
+        <Button fx:id="editButton" layoutX="550.0" layoutY="235.0" onAction="#handleEdit" prefWidth="100.0" text="Edit Selected" />
+
+        <Label layoutX="50.0" layoutY="260.0" text="Project Details:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="285.0" text="Project Title:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="titleTextField" layoutX="130.0" layoutY="280.0" prefWidth="200.0" />
+
+        <Label layoutX="350.0" layoutY="285.0" text="Client:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="clientComboBox" layoutX="390.0" layoutY="280.0" prefWidth="150.0" />
+
+        <Label layoutX="50.0" layoutY="315.0" text="Description:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="descriptionTextArea" layoutX="50.0" layoutY="335.0" prefHeight="80.0" prefWidth="300.0" />
+
+        <Label layoutX="370.0" layoutY="315.0" text="Budget:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="budgetTextField" layoutX="370.0" layoutY="335.0" prefWidth="100.0" promptText="0.00" />
+
+        <Label layoutX="490.0" layoutY="315.0" text="Priority:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="priorityComboBox" layoutX="490.0" layoutY="335.0" prefWidth="80.0" />
+
+        <Label layoutX="370.0" layoutY="365.0" text="Deadline:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="deadlineDatePicker" layoutX="430.0" layoutY="360.0" prefWidth="140.0" />
+
+        <Label layoutX="370.0" layoutY="395.0" text="Status:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="statusComboBox" layoutX="420.0" layoutY="390.0" prefWidth="120.0" />
+
+        <Label layoutX="50.0" layoutY="430.0" text="Project Requirements:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="455.0" text="Technical Specifications:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="specificationsTextArea" layoutX="50.0" layoutY="475.0" prefHeight="60.0" prefWidth="300.0" promptText="Enter technical requirements..." />
+
+        <Label layoutX="370.0" layoutY="455.0" text="Skills Required:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="skillsTextField" layoutX="370.0" layoutY="475.0" prefWidth="150.0" promptText="e.g., Java, Python" />
+
+        <Label layoutX="370.0" layoutY="505.0" text="Team Size:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="teamSizeTextField" layoutX="440.0" layoutY="500.0" prefWidth="80.0" promptText="0" />
+
+        <CheckBox fx:id="urgentCheckBox" layoutX="530.0" layoutY="505.0" text="Urgent" textFill="WHITE" />
+
+        <Button fx:id="saveButton" layoutX="50.0" layoutY="550.0" onAction="#handleSave" prefWidth="100.0" text="Save Changes" />
+        <Button fx:id="resetButton" layoutX="160.0" layoutY="550.0" onAction="#handleReset" prefWidth="80.0" text="Reset" />
+        <Button fx:id="deleteButton" layoutX="250.0" layoutY="550.0" onAction="#handleDelete" prefWidth="80.0" text="Delete" />
+
+        <Label fx:id="statusLabel" layoutX="350.0" layoutY="555.0" textFill="LIGHTGREEN" visible="false">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="backButton" layoutX="550.0" layoutY="550.0" onAction="#handleBack" prefWidth="100.0" text="Back to Dashboard" />
+    </children>
+</AnchorPane>

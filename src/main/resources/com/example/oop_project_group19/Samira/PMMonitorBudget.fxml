@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Samira.PMMonitorBudgetController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="Monitor Project Budget" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Budget Input Form:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="110.0" text="Select Project:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="projectComboBox" layoutX="140.0" layoutY="105.0" prefWidth="200.0" promptText="Choose Project" />
+
+        <Label layoutX="360.0" layoutY="110.0" text="Budget Category:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="categoryComboBox" layoutX="460.0" layoutY="105.0" prefWidth="150.0" promptText="Select Category" />
+
+        <Label layoutX="50.0" layoutY="145.0" text="Total Budget:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="totalBudgetTextField" layoutX="140.0" layoutY="140.0" prefWidth="120.0" promptText="0.00" />
+
+        <Label layoutX="280.0" layoutY="145.0" text="Allocated:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="allocatedTextField" layoutX="340.0" layoutY="140.0" prefWidth="120.0" promptText="0.00" />
+
+        <Label layoutX="480.0" layoutY="145.0" text="Spent:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="spentTextField" layoutX="520.0" layoutY="140.0" prefWidth="120.0" promptText="0.00" />
+
+        <Label layoutX="50.0" layoutY="180.0" text="Development Cost:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="developmentCostTextField" layoutX="160.0" layoutY="175.0" prefWidth="100.0" promptText="0.00" />
+
+        <Label layoutX="280.0" layoutY="180.0" text="Design Cost:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="designCostTextField" layoutX="360.0" layoutY="175.0" prefWidth="100.0" promptText="0.00" />
+
+        <Label layoutX="480.0" layoutY="180.0" text="Testing Cost:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="testingCostTextField" layoutX="560.0" layoutY="175.0" prefWidth="100.0" promptText="0.00" />
+
+        <Label layoutX="50.0" layoutY="215.0" text="Miscellaneous:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="miscTextField" layoutX="140.0" layoutY="210.0" prefWidth="120.0" promptText="0.00" />
+
+        <Label layoutX="280.0" layoutY="215.0" text="Contingency (%):" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="contingencyTextField" layoutX="380.0" layoutY="210.0" prefWidth="80.0" promptText="10" />
+
+        <Button fx:id="calculateButton" layoutX="480.0" layoutY="210.0" onAction="#handleCalculate" prefWidth="80.0" text="Calculate" />
+        <Button fx:id="saveButton" layoutX="570.0" layoutY="210.0" onAction="#handleSave" prefWidth="80.0" text="Save" />
+
+        <Label fx:id="errorLabel" layoutX="50.0" layoutY="245.0" textFill="RED" visible="false">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="270.0" text="Budget Overview:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="budgetTable" layoutX="50.0" layoutY="295.0" prefHeight="200.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="projectNameColumn" prefWidth="150.0" text="Project Name" />
+                <TableColumn fx:id="totalBudgetColumn" prefWidth="100.0" text="Total Budget" />
+                <TableColumn fx:id="allocatedColumn" prefWidth="100.0" text="Allocated" />
+                <TableColumn fx:id="spentColumn" prefWidth="100.0" text="Spent" />
+                <TableColumn fx:id="remainingColumn" prefWidth="100.0" text="Remaining" />
+                <TableColumn fx:id="statusBudgetColumn" prefWidth="50.0" text="Status" />
+            </columns>
+        </TableView>
+
+        <Label fx:id="totalProjectBudgetLabel" layoutX="50.0" layoutY="505.0" text="Total Project Budget: 0.00" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <Label fx:id="totalSpentLabel" layoutX="250.0" layoutY="505.0" text="Total Spent: 0.00" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <Label fx:id="budgetUtilizationLabel" layoutX="400.0" layoutY="505.0" text="Utilization: 0%" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="refreshButton" layoutX="50.0" layoutY="540.0" onAction="#handleRefresh" prefWidth="80.0" text="Refresh" />
+        <Button fx:id="exportButton" layoutX="140.0" layoutY="540.0" onAction="#handleExport" prefWidth="80.0" text="Export" />
+        <Button fx:id="backButton" layoutX="550.0" layoutY="540.0" onAction="#handleBack" prefWidth="100.0" text="Back to Dashboard" />
+    </children>
+</AnchorPane>

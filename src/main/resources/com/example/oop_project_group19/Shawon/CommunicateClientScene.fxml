@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2c3e50;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Shawon.CommunicateClientController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="Communicate with Client" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="70.0" text="Active Project:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="projectComboBox" layoutX="150.0" layoutY="65.0" onAction="#handleProjectSelection" prefHeight="30.0" prefWidth="300.0" promptText="Select active project" />
+
+        <Label layoutX="470.0" layoutY="70.0" text="Client:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="clientNameField" layoutX="520.0" layoutY="65.0" editable="false" prefHeight="30.0" prefWidth="200.0" />
+
+        <Label layoutX="50.0" layoutY="110.0" text="Project Chat:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <TextArea fx:id="chatHistoryArea" layoutX="50.0" layoutY="135.0" editable="false" prefHeight="350.0" prefWidth="700.0" style="-fx-background-color: #34495e; -fx-text-fill: white;" wrapText="true" />
+
+        <Label layoutX="50.0" layoutY="500.0" text="Your Message:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <TextArea fx:id="messageInputArea" layoutX="50.0" layoutY="525.0" prefHeight="50.0" prefWidth="580.0" promptText="Type your message to the client..." wrapText="true" />
+
+        <Button fx:id="sendButton" layoutX="650.0" layoutY="525.0" onAction="#handleSendMessage" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #3498db; -fx-text-fill: white;" text="Send" />
+
+        <Button fx:id="attachFileButton" layoutX="550.0" layoutY="110.0" onAction="#handleAttachFile" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #9b59b6; -fx-text-fill: white;" text="Attach File" />
+        <Button fx:id="clearChatButton" layoutX="660.0" layoutY="110.0" onAction="#handleClearChat" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #e67e22; -fx-text-fill: white;" text="Clear Chat" />
+        <Button fx:id="backButton" layoutX="730.0" layoutY="65.0" onAction="#handleBack" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: #95a5a6; -fx-text-fill: white;" text="Back" />
+
+        <Label fx:id="onlineStatusLabel" layoutX="720.0" layoutY="70.0" text="●" textFill="#27ae60">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

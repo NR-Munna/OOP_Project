@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Samira.AdminExportUserDataController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="Export User Data" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Select Users to Export:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="usersTable" layoutX="50.0" layoutY="105.0" prefHeight="180.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="selectColumn" prefWidth="50.0" text="Select" />
+                <TableColumn fx:id="idColumn" prefWidth="60.0" text="ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="150.0" text="Name" />
+                <TableColumn fx:id="emailColumn" prefWidth="180.0" text="Email" />
+                <TableColumn fx:id="typeColumn" prefWidth="100.0" text="Type" />
+                <TableColumn fx:id="statusColumn" prefWidth="60.0" text="Status" />
+            </columns>
+        </TableView>
+
+        <Button fx:id="selectAllUsersButton" layoutX="50.0" layoutY="295.0" onAction="#handleSelectAllUsers" prefWidth="100.0" text="Select All" />
+        <Button fx:id="clearSelectionButton" layoutX="160.0" layoutY="295.0" onAction="#handleClearSelection" prefWidth="100.0" text="Clear Selection" />
+
+        <Label fx:id="selectedCountLabel" layoutX="280.0" layoutY="300.0" text="Selected: 0 users" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="330.0" text="Select Data Fields to Include:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <CheckBox fx:id="basicInfoCheckBox" layoutX="50.0" layoutY="360.0" selected="true" text="Basic Information (ID, Name, Email)" textFill="WHITE" />
+        <CheckBox fx:id="contactInfoCheckBox" layoutX="50.0" layoutY="385.0" text="Contact Information" textFill="WHITE" />
+        <CheckBox fx:id="profileInfoCheckBox" layoutX="50.0" layoutY="410.0" text="Profile Information" textFill="WHITE" />
+        <CheckBox fx:id="accountInfoCheckBox" layoutX="50.0" layoutY="435.0" text="Account Status and Dates" textFill="WHITE" />
+
+        <CheckBox fx:id="projectHistoryCheckBox" layoutX="350.0" layoutY="360.0" text="Project History" textFill="WHITE" />
+        <CheckBox fx:id="paymentInfoCheckBox" layoutX="350.0" layoutY="385.0" text="Payment Information" textFill="WHITE" />
+        <CheckBox fx:id="ratingsCheckBox" layoutX="350.0" layoutY="410.0" text="Ratings and Reviews" textFill="WHITE" />
+        <CheckBox fx:id="activityLogCheckBox" layoutX="350.0" layoutY="435.0" text="Activity Log" textFill="WHITE" />
+
+        <Label layoutX="50.0" layoutY="470.0" text="Export Options:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <RadioButton fx:id="pdfRadioButton" layoutX="50.0" layoutY="495.0" selected="true" text="PDF Format" textFill="WHITE" toggleGroup="$exportFormat" />
+        <RadioButton fx:id="csvRadioButton" layoutX="150.0" layoutY="495.0" text="CSV Format" textFill="WHITE" toggleGroup="$exportFormat" />
+        <CheckBox fx:id="includeHeadersCheckBox" layoutX="250.0" layoutY="495.0" selected="true" text="Include Headers" textFill="WHITE" />
+
+        <Label fx:id="errorLabel" layoutX="400.0" layoutY="470.0" textFill="RED" visible="false">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="generatePdfButton" layoutX="400.0" layoutY="490.0" onAction="#handleGeneratePDF" prefWidth="120.0" text="Generate PDF" />
+        <Button fx:id="previewButton" layoutX="530.0" layoutY="490.0" onAction="#handlePreview" prefWidth="80.0" text="Preview" />
+
+        <Label fx:id="successLabel" layoutX="50.0" layoutY="530.0" textFill="LIGHTGREEN" visible="false">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="backButton" layoutX="550.0" layoutY="555.0" onAction="#handleBack" prefWidth="100.0" text="Back to Dashboard" />
+    </children>
+</AnchorPane>

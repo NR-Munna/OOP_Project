@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Naimur.EmployeeRecordsController">
+    <children>
+        <Label layoutX="280.0" layoutY="20.0" text="Employee Records" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="70.0" text="Select Employee:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="employeeComboBox" layoutX="180.0" layoutY="65.0" onAction="#onEmployeeSelected" prefWidth="200.0" promptText="Choose employee..." />
+        <Button fx:id="editRecordBtn" layoutX="400.0" layoutY="65.0" onAction="#onEditRecord" style="-fx-background-color: #FF9800; -fx-text-fill: white;" text="Edit Record" />
+
+        <Separator layoutX="50.0" layoutY="110.0" prefWidth="600.0" />
+
+        <Label layoutX="50.0" layoutY="140.0" text="Employee ID:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="employeeIdField" disable="true" layoutX="180.0" layoutY="135.0" prefWidth="200.0" />
+
+        <Label layoutX="50.0" layoutY="180.0" text="Full Name:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="fullNameField" layoutX="180.0" layoutY="175.0" prefWidth="300.0" />
+
+        <Label layoutX="50.0" layoutY="220.0" text="Position:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="positionField" layoutX="180.0" layoutY="215.0" prefWidth="200.0" />
+
+        <Label layoutX="50.0" layoutY="260.0" text="Department:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="departmentComboBox" layoutX="180.0" layoutY="255.0" prefWidth="200.0" />
+
+        <Label layoutX="50.0" layoutY="300.0" text="Hire Date:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="hireDatePicker" layoutX="180.0" layoutY="295.0" prefWidth="200.0" />
+
+        <Label layoutX="50.0" layoutY="340.0" text="Salary:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="salaryField" layoutX="180.0" layoutY="335.0" prefWidth="200.0" promptText="Monthly salary" />
+
+        <Label layoutX="50.0" layoutY="380.0" text="Status:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="activeRadio" layoutX="180.0" layoutY="380.0" text="Active" textFill="WHITE">
+            <toggleGroup>
+                <ToggleGroup fx:id="statusGroup" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="inactiveRadio" layoutX="260.0" layoutY="380.0" text="Inactive" textFill="WHITE" toggleGroup="$statusGroup" />
+
+        <Label layoutX="50.0" layoutY="420.0" text="Notes:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="notesArea" layoutX="180.0" layoutY="415.0" prefHeight="60.0" prefWidth="400.0" />
+
+        <Button fx:id="saveBtn" layoutX="200.0" layoutY="500.0" onAction="#onSaveRecord" prefWidth="100.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Save Changes" />
+        <Button fx:id="cancelBtn" layoutX="320.0" layoutY="500.0" onAction="#onCancel" prefWidth="100.0" style="-fx-background-color: #f44336; -fx-text-fill: white;" text="Cancel" />
+        <Button fx:id="backBtn" layoutX="550.0" layoutY="500.0" onAction="#onBack" style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="Back" />
+    </children>
+</AnchorPane>

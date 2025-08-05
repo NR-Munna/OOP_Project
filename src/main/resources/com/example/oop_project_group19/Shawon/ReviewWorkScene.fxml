@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2c3e50;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Shawon.ReviewWorkController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="Review Submitted Work" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Project:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="projectComboBox" layoutX="110.0" layoutY="75.0" onAction="#handleProjectSelection" prefHeight="30.0" prefWidth="400.0" promptText="Select project with submitted work" />
+        <Button fx:id="refreshButton" layoutX="530.0" layoutY="75.0" onAction="#handleRefresh" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #3498db; -fx-text-fill: white;" text="Refresh" />
+
+        <Label layoutX="50.0" layoutY="120.0" text="Submitted Files:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="filesTable" layoutX="50.0" layoutY="145.0" prefHeight="150.0" prefWidth="700.0">
+            <columns>
+                <TableColumn fx:id="fileNameColumn" prefWidth="200.0" text="File Name" />
+                <TableColumn fx:id="fileSizeColumn" prefWidth="100.0" text="Size" />
+                <TableColumn fx:id="uploadDateColumn" prefWidth="150.0" text="Upload Date" />
+                <TableColumn fx:id="fileTypeColumn" prefWidth="100.0" text="Type" />
+                <TableColumn fx:id="actionsColumn" prefWidth="150.0" text="Actions" />
+            </columns>
+        </TableView>
+
+        <Label layoutX="50.0" layoutY="310.0" text="Freelancer Comments:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="freelancerCommentsArea" editable="false" layoutX="50.0" layoutY="335.0" prefHeight="80.0" prefWidth="700.0" style="-fx-background-color: #34495e; -fx-text-fill: white;" wrapText="true" />
+
+        <Label layoutX="50.0" layoutY="430.0" text="Your Review Comments:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="reviewCommentsArea" layoutX="50.0" layoutY="455.0" prefHeight="80.0" prefWidth="500.0" promptText="Enter your review comments here..." wrapText="true" />
+
+        <Label layoutX="570.0" layoutY="430.0" text="Work Status:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="approveRadio" layoutX="570.0" layoutY="455.0" text="Approve Work" textFill="WHITE">
+            <toggleGroup>
+                <ToggleGroup fx:id="statusGroup" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="requestChangesRadio" layoutX="570.0" layoutY="480.0" text="Request Changes" textFill="WHITE" toggleGroup="$statusGroup" />
+        <RadioButton fx:id="rejectRadio" layoutX="570.0" layoutY="505.0" text="Reject Work" textFill="WHITE" toggleGroup="$statusGroup" />
+
+        <Button fx:id="submitReviewButton" layoutX="600.0" layoutY="550.0" onAction="#handleSubmitReview" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #27ae60; -fx-text-fill: white;" text="Submit Review" />
+        <Button fx:id="backButton" layoutX="730.0" layoutY="550.0" onAction="#handleBack" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: #95a5a6; -fx-text-fill: white;" text="Back" />
+
+        <Label fx:id="statusLabel" layoutX="50.0" layoutY="565.0" textFill="#f39c12">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom, #667eea, #764ba2);" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Adnan.RCreateReviewNoteController">
+    <children>
+        <Label layoutX="320.0" layoutY="20.0" text="Create Review Notes" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="70.0" text="Select Target:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <RadioButton fx:id="projectRadio" layoutX="150.0" layoutY="70.0" mnemonicParsing="false" text="Project" textFill="WHITE" />
+        <RadioButton fx:id="freelancerRadio" layoutX="220.0" layoutY="70.0" mnemonicParsing="false" text="Freelancer" textFill="WHITE" />
+
+        <Label layoutX="50.0" layoutY="110.0" text="Select Project/Freelancer:" textFill="WHITE" />
+        <ComboBox fx:id="targetSelection" layoutX="220.0" layoutY="105.0" prefWidth="200.0" />
+
+        <Label layoutX="50.0" layoutY="150.0" text="Note Category:" textFill="WHITE" />
+        <ComboBox fx:id="noteCategoryCombo" layoutX="150.0" layoutY="145.0" prefWidth="150.0" />
+
+        <Label layoutX="50.0" layoutY="190.0" text="Priority Level:" textFill="WHITE" />
+        <ComboBox fx:id="priorityCombo" layoutX="150.0" layoutY="185.0" prefWidth="120.0" />
+
+        <Label layoutX="50.0" layoutY="230.0" text="Review Notes:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <TextArea fx:id="reviewNotesArea" layoutX="50.0" layoutY="255.0" prefHeight="150.0" prefWidth="600.0" promptText="Enter detailed observations and recommendations..." />
+
+        <Label layoutX="50.0" layoutY="420.0" text="Recommendations:" textFill="WHITE" />
+        <TextArea fx:id="recommendationsArea" layoutX="50.0" layoutY="445.0" prefHeight="80.0" prefWidth="600.0" promptText="Enter specific recommendations..." />
+
+        <Button fx:id="addNoteBtn" layoutX="580.0" layoutY="535.0" mnemonicParsing="false" onAction="#handleAddNote" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Add Note" />
+
+        <Button fx:id="backBtn" layoutX="680.0" layoutY="535.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #666; -fx-text-fill: white;" text="Back" />
+    </children>
+</AnchorPane>

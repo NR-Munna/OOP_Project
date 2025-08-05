@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Naimur.UpdateContactController">
+    <children>
+        <Label layoutX="250.0" layoutY="20.0" text="Update Contact Information" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Search Freelancer:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="searchField" layoutX="200.0" layoutY="75.0" prefWidth="200.0" promptText="Enter freelancer name or ID" />
+        <Button fx:id="searchBtn" layoutX="420.0" layoutY="75.0" onAction="#onSearchFreelancer" style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="Search" />
+
+        <Separator layoutX="50.0" layoutY="120.0" prefWidth="600.0" />
+
+        <Label layoutX="50.0" layoutY="150.0" text="Freelancer Name:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="nameField" disable="true" layoutX="200.0" layoutY="145.0" prefWidth="300.0" />
+
+        <Label layoutX="50.0" layoutY="200.0" text="Phone Number:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="phoneField" layoutX="200.0" layoutY="195.0" prefWidth="300.0" promptText="e.g., +1234567890" />
+
+        <Label layoutX="50.0" layoutY="250.0" text="Email Address:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="emailField" layoutX="200.0" layoutY="245.0" prefWidth="300.0" promptText="example@email.com" />
+
+        <Label layoutX="50.0" layoutY="300.0" text="Address:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="addressArea" layoutX="200.0" layoutY="295.0" prefHeight="80.0" prefWidth="400.0" />
+
+        <Label fx:id="validationLabel" layoutX="200.0" layoutY="390.0" textFill="#FF6B6B">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="saveBtn" layoutX="200.0" layoutY="420.0" onAction="#onSaveContact" prefWidth="100.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Save Changes" />
+        <Button fx:id="cancelBtn" layoutX="320.0" layoutY="420.0" onAction="#onCancel" prefWidth="100.0" style="-fx-background-color: #f44336; -fx-text-fill: white;" text="Cancel" />
+        <Button fx:id="backBtn" layoutX="50.0" layoutY="530.0" onAction="#onBack" style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="Back to Dashboard" />
+    </children>
+</AnchorPane>

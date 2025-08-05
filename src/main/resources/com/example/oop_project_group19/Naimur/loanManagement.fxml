@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="650.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Naimur.LoanManagementController">
+    <children>
+        <Label layoutX="250.0" layoutY="20.0" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: white;" text="Loan and Delay Management" />
+        <Label layoutX="50.0" layoutY="60.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: white;" text="Loan Requests:" />
+        <TableView fx:id="loanRequestsTable" layoutX="50.0" layoutY="90.0" prefHeight="120.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="loanRequestIdColumn" prefWidth="80.0" text="Request ID" />
+                <TableColumn fx:id="freelancerNameColumn" prefWidth="150.0" text="Freelancer Name" />
+                <TableColumn fx:id="loanAmountColumn" prefWidth="100.0" text="Loan Amount" />
+                <TableColumn fx:id="requestDateColumn" prefWidth="100.0" text="Request Date" />
+                <TableColumn fx:id="loanStatusColumn" prefWidth="80.0" text="Status" />
+                <TableColumn fx:id="urgencyColumn" prefWidth="90.0" text="Urgency" />
+            </columns>
+        </TableView>
+        <Label layoutX="50.0" layoutY="230.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: white;" text="Payment Delays:" />
+        <TableView fx:id="paymentDelaysTable" layoutX="50.0" layoutY="260.0" prefHeight="120.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="delayIdColumn" prefWidth="80.0" text="Delay ID" />
+                <TableColumn fx:id="clientNameColumn" prefWidth="150.0" text="Client Name" />
+                <TableColumn fx:id="projectNameColumn" prefWidth="130.0" text="Project Name" />
+                <TableColumn fx:id="delayedAmountColumn" prefWidth="100.0" text="Amount" />
+                <TableColumn fx:id="originalDueDateColumn" prefWidth="100.0" text="Due Date" />
+                <TableColumn fx:id="delayStatusColumn" prefWidth="40.0" text="Status" />
+            </columns>
+        </TableView>
+        <Label layoutX="50.0" layoutY="400.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: white;" text="Request Details:" />
+        <Label layoutX="50.0" layoutY="430.0" style="-fx-text-fill: white;" text="Request ID:" />
+        <TextField fx:id="selectedRequestIdField" editable="false" layoutX="130.0" layoutY="426.0" prefWidth="100.0" />
+        <Label layoutX="250.0" layoutY="430.0" style="-fx-text-fill: white;" text="Applicant Name:" />
+        <TextField fx:id="selectedApplicantField" editable="false" layoutX="350.0" layoutY="426.0" prefWidth="150.0" />
+        <Label layoutX="520.0" layoutY="430.0" style="-fx-text-fill: white;" text="Amount:" />
+        <TextField fx:id="selectedAmountField" editable="false" layoutX="570.0" layoutY="426.0" prefWidth="80.0" />
+        <Label layoutX="50.0" layoutY="470.0" style="-fx-text-fill: white;" text="Request Reason:" />
+        <TextArea fx:id="requestReasonArea" editable="false" layoutX="50.0" layoutY="490.0" prefHeight="80.0" prefWidth="600.0" wrapText="true" />
+        <Button fx:id="approveBtn" layoutX="450.0" layoutY="610.0" onAction="#onApprove" prefWidth="100.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;" text="Approve" />
+        <Button fx:id="denyBtn" layoutX="570.0" layoutY="610.0" onAction="#onDeny" prefWidth="100.0" style="-fx-background-color: #f44336; -fx-text-fill: white;" text="Deny" />
+        <Button fx:id="backBtn" layoutX="50.0" layoutY="610.0" onAction="#onBack" prefWidth="100.0" style="-fx-background-color: #9E9E9E; -fx-text-fill: white;" text="Back" />
+    </children>
+</AnchorPane>

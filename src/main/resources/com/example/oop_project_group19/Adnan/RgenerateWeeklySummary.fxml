@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom, #667eea, #764ba2);" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Adnan.RGenerateWeeklySummaryController">
+    <children>
+        <Label layoutX="280.0" layoutY="20.0" text="Generate Weekly Summary" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Select Week Range:" textFill="WHITE">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="80.0" layoutY="115.0" text="Start Date:" textFill="WHITE" />
+        <DatePicker fx:id="startDatePicker" layoutX="150.0" layoutY="110.0" prefWidth="150.0" />
+
+        <Label layoutX="350.0" layoutY="115.0" text="End Date:" textFill="WHITE" />
+        <DatePicker fx:id="endDatePicker" layoutX="420.0" layoutY="110.0" prefWidth="150.0" />
+
+        <Label layoutX="50.0" layoutY="160.0" text="Summary Report Preview:" textFill="WHITE">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+
+        <TextArea fx:id="summaryPreview" editable="false" layoutX="50.0" layoutY="185.0" prefHeight="300.0" prefWidth="700.0" style="-fx-background-color: white; -fx-opacity: 0.9;" />
+
+        <Label layoutX="50.0" layoutY="500.0" text="Report Options:" textFill="WHITE" />
+
+        <CheckBox fx:id="includeProjectStats" layoutX="80.0" layoutY="525.0" mnemonicParsing="false" selected="true" text="Include Project Statistics" textFill="WHITE" />
+
+        <CheckBox fx:id="includeFreelancerRatings" layoutX="280.0" layoutY="525.0" mnemonicParsing="false" selected="true" text="Include Freelancer Ratings" textFill="WHITE" />
+
+        <CheckBox fx:id="includeClientFeedback" layoutX="480.0" layoutY="525.0" mnemonicParsing="false" selected="true" text="Include Client Feedback" textFill="WHITE" />
+
+        <Button fx:id="generatePreviewBtn" layoutX="580.0" layoutY="110.0" mnemonicParsing="false" onAction="#handleGeneratePreview" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="Generate Preview" />
+
+        <Button fx:id="generatePDFBtn" layoutX="580.0" layoutY="555.0" mnemonicParsing="false" onAction="#handleGeneratePDF" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Generate PDF" />
+
+        <Button fx:id="backBtn" layoutX="50.0" layoutY="555.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #666; -fx-text-fill: white;" text="Back" />
+    </children>
+</AnchorPane>

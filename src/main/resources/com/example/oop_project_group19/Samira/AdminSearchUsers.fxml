@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Samira.AdminSearchUsersController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="Search Users" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Search Criteria:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <TextField fx:id="searchTextField" layoutX="50.0" layoutY="105.0" prefWidth="300.0" promptText="Enter name, ID, or email..." />
+        <ComboBox fx:id="searchTypeComboBox" layoutX="360.0" layoutY="105.0" prefWidth="100.0" promptText="Search By" />
+        <Button fx:id="searchButton" layoutX="470.0" layoutY="105.0" onAction="#handleSearch" prefWidth="80.0" text="Search" />
+        <Button fx:id="clearSearchButton" layoutX="560.0" layoutY="105.0" onAction="#handleClearSearch" prefWidth="80.0" text="Clear" />
+
+        <Label fx:id="errorLabel" layoutX="50.0" layoutY="140.0" textFill="RED" visible="false">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="searchResultsTable" layoutX="50.0" layoutY="160.0" prefHeight="350.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="60.0" text="ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="150.0" text="Name" />
+                <TableColumn fx:id="emailColumn" prefWidth="180.0" text="Email" />
+                <TableColumn fx:id="typeColumn" prefWidth="100.0" text="Type" />
+                <TableColumn fx:id="statusColumn" prefWidth="110.0" text="Status" />
+            </columns>
+        </TableView>
+
+        <Label fx:id="noResultsLabel" layoutX="290.0" layoutY="330.0" text="No results found" textFill="WHITE" visible="false">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <Label fx:id="resultCountLabel" layoutX="50.0" layoutY="520.0" text="Results: 0" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="backButton" layoutX="550.0" layoutY="530.0" onAction="#handleBack" prefWidth="100.0" text="Back to Dashboard" />
+    </children>
+</AnchorPane>

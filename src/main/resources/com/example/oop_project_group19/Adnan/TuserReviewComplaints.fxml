@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom, #667eea, #764ba2);" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Adnan.TReviewsComplaintsController">
+    <children>
+        <Label layoutX="310.0" layoutY="20.0" text="User Reviews &amp; Complaints" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="70.0" text="Filter Type:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <RadioButton fx:id="allReviewsRadio" layoutX="140.0" layoutY="70.0" selected="true" text="All Reviews" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="reviewTypeGroup" />
+         </toggleGroup>
+        </RadioButton>
+
+        <RadioButton fx:id="positiveReviewsRadio" layoutX="240.0" layoutY="70.0" text="Positive" textFill="WHITE" toggleGroup="$reviewTypeGroup">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </RadioButton>
+
+        <RadioButton fx:id="negativeReviewsRadio" layoutX="320.0" layoutY="70.0" text="Negative" textFill="WHITE" toggleGroup="$reviewTypeGroup">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </RadioButton>
+
+        <RadioButton fx:id="complaintsRadio" layoutX="410.0" layoutY="70.0" text="Complaints" textFill="WHITE" toggleGroup="$reviewTypeGroup">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </RadioButton>
+
+        <Button fx:id="applyFilterBtn" layoutX="520.0" layoutY="68.0" onAction="#handleApplyFilter" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #4facfe; -fx-background-radius: 5; -fx-text-fill: white;" text="Apply" />
+
+        <TableView fx:id="reviewsTable" layoutX="50.0" layoutY="110.0" prefHeight="250.0" prefWidth="800.0" style="-fx-background-color: rgba(255,255,255,0.9); -fx-background-radius: 10;">
+            <columns>
+                <TableColumn fx:id="reviewIdColumn" prefWidth="80.0" text="ID" />
+                <TableColumn fx:id="userIdColumn" prefWidth="100.0" text="User ID" />
+                <TableColumn fx:id="usernameColumn" prefWidth="120.0" text="Username" />
+                <TableColumn fx:id="typeColumn" prefWidth="100.0" text="Type" />
+                <TableColumn fx:id="ratingColumn" prefWidth="70.0" text="Rating" />
+                <TableColumn fx:id="timestampColumn" prefWidth="130.0" text="Timestamp" />
+                <TableColumn fx:id="statusColumn" prefWidth="100.0" text="Status" />
+                <TableColumn fx:id="priorityColumn" prefWidth="100.0" text="Priority" />
+            </columns>
+        </TableView>
+
+        <Label layoutX="50.0" layoutY="380.0" text="Selected Review/Complaint Details:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="410.0" text="User Info:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="selectedUserInfoField" editable="false" layoutX="120.0" layoutY="407.0" prefWidth="250.0" style="-fx-background-color: rgba(255,255,255,0.8); -fx-background-radius: 5;" />
+
+        <Label layoutX="50.0" layoutY="450.0" text="Review/Complaint Content:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="selectedContentArea" editable="false" layoutX="50.0" layoutY="470.0" prefHeight="80.0" prefWidth="580.0" style="-fx-background-color: rgba(255,255,255,0.8); -fx-background-radius: 5;" wrapText="true" />
+
+        <Label layoutX="50.0" layoutY="570.0" text="Response Status:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="responseStatusCombo" layoutX="160.0" layoutY="567.0" prefWidth="150.0" style="-fx-background-color: rgba(255,255,255,0.8); -fx-background-radius: 5;" />
+
+        <Button fx:id="updateStatusBtn" layoutX="500.0" layoutY="567.0" onAction="#handleUpdateStatus" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #28a745; -fx-background-radius: 5; -fx-text-fill: white;" text="Update Status" />
+
+        <Label layoutX="50.0" layoutY="620.0" text="Response Notes:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="responseNotesArea" layoutX="150.0" layoutY="620.0" prefHeight="60.0" prefWidth="400.0" style="-fx-background-color: rgba(255,255,255,0.8); -fx-background-radius: 5;" wrapText="true" />
+
+        <Button fx:id="saveNotesBtn" layoutX="570.0" layoutY="635.0" onAction="#handleSaveNotes" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #007bff; -fx-background-radius: 5; -fx-text-fill: white;" text="Save Notes" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Samira.AdminSystemStatisticsController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="System Statistics" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Select Statistics to Display:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <CheckBox fx:id="totalUsersCheckBox" layoutX="50.0" layoutY="110.0" text="Total Active Users" textFill="WHITE" />
+        <CheckBox fx:id="totalProjectsCheckBox" layoutX="50.0" layoutY="135.0" text="Total Projects" textFill="WHITE" />
+        <CheckBox fx:id="completedProjectsCheckBox" layoutX="50.0" layoutY="160.0" text="Completed Projects" textFill="WHITE" />
+        <CheckBox fx:id="ongoingProjectsCheckBox" layoutX="50.0" layoutY="185.0" text="Ongoing Projects" textFill="WHITE" />
+        <CheckBox fx:id="totalRevenueCheckBox" layoutX="50.0" layoutY="210.0" text="Total Revenue" textFill="WHITE" />
+
+        <CheckBox fx:id="newUsersCheckBox" layoutX="350.0" layoutY="110.0" text="New Users (This Month)" textFill="WHITE" />
+        <CheckBox fx:id="activeFreelancersCheckBox" layoutX="350.0" layoutY="135.0" text="Active Freelancers" textFill="WHITE" />
+        <CheckBox fx:id="activeClientsCheckBox" layoutX="350.0" layoutY="160.0" text="Active Clients" textFill="WHITE" />
+        <CheckBox fx:id="pendingProjectsCheckBox" layoutX="350.0" layoutY="185.0" text="Pending Projects" textFill="WHITE" />
+        <CheckBox fx:id="averageProjectValueCheckBox" layoutX="350.0" layoutY="210.0" text="Average Project Value" textFill="WHITE" />
+
+        <Button fx:id="selectAllButton" layoutX="50.0" layoutY="245.0" onAction="#handleSelectAll" prefWidth="80.0" text="Select All" />
+        <Button fx:id="clearAllButton" layoutX="140.0" layoutY="245.0" onAction="#handleClearAll" prefWidth="80.0" text="Clear All" />
+        <Button fx:id="generateStatsButton" layoutX="230.0" layoutY="245.0" onAction="#handleGenerateStats" prefWidth="120.0" text="Generate Statistics" />
+
+        <Label fx:id="errorLabel" layoutX="360.0" layoutY="250.0" textFill="RED" visible="false">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="285.0" text="Statistics Data:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="statisticsTable" layoutX="50.0" layoutY="310.0" prefHeight="200.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="statisticNameColumn" prefWidth="300.0" text="Statistic" />
+                <TableColumn fx:id="valueColumn" prefWidth="150.0" text="Value" />
+                <TableColumn fx:id="percentageColumn" prefWidth="150.0" text="Percentage/Change" />
+            </columns>
+        </TableView>
+
+        <Label fx:id="lastUpdatedLabel" layoutX="50.0" layoutY="520.0" text="Last Updated: Never" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="refreshButton" layoutX="350.0" layoutY="520.0" onAction="#handleRefresh" prefWidth="80.0" text="Refresh" />
+        <Button fx:id="exportStatsButton" layoutX="440.0" layoutY="520.0" onAction="#handleExportStats" prefWidth="100.0" text="Export Stats" />
+        <Button fx:id="backButton" layoutX="550.0" layoutY="520.0" onAction="#handleBack" prefWidth="100.0" text="Back to Dashboard" />
+    </children>
+</AnchorPane>

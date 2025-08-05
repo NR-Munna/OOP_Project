@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Samira.AdminUpdateUserStatusController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="Update User Status" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Select User to Update:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="usersTable" layoutX="50.0" layoutY="105.0" prefHeight="180.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="60.0" text="ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="180.0" text="Name" />
+                <TableColumn fx:id="typeColumn" prefWidth="120.0" text="Type" />
+                <TableColumn fx:id="currentStatusColumn" prefWidth="120.0" text="Current Status" />
+                <TableColumn fx:id="lastUpdatedColumn" prefWidth="120.0" text="Last Updated" />
+            </columns>
+        </TableView>
+
+        <Label layoutX="50.0" layoutY="305.0" text="Update Status Information:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="335.0" text="New Status:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <ComboBox fx:id="newStatusComboBox" layoutX="140.0" layoutY="330.0" prefWidth="150.0" promptText="Select Status" />
+
+        <Label layoutX="50.0" layoutY="370.0" text="Reason for Change:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <TextArea fx:id="reasonTextArea" layoutX="50.0" layoutY="395.0" prefHeight="80.0" prefWidth="400.0" promptText="Enter reason for status change..." style="-fx-background-color: white; -fx-opacity: 0.9;" />
+
+        <Label fx:id="selectedUserLabel" layoutX="470.0" layoutY="335.0" text="Selected: None" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+
+        <Label fx:id="errorLabel" layoutX="470.0" layoutY="355.0" textFill="RED" visible="false">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="updateButton" layoutX="470.0" layoutY="395.0" onAction="#handleUpdate" prefWidth="100.0" text="Update Status" />
+        <Button fx:id="cancelButton" layoutX="470.0" layoutY="435.0" onAction="#handleCancel" prefWidth="100.0" text="Cancel" />
+
+        <Label fx:id="successLabel" layoutX="50.0" layoutY="490.0" textFill="LIGHTGREEN" visible="false">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="backButton" layoutX="550.0" layoutY="530.0" onAction="#handleBack" prefWidth="100.0" text="Back to Dashboard" />
+    </children>
+</AnchorPane>

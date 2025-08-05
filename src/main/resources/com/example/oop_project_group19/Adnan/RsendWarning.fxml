@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom, #667eea, #764ba2);" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Adnan.RSendWarningController">
+    <children>
+        <Label layoutX="260.0" layoutY="20.0" text="Send Warning to Freelancer" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="70.0" text="Low-Rated Freelancers:" textFill="WHITE">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="95.0" text="Rating Threshold:" textFill="WHITE" />
+        <ComboBox fx:id="ratingThresholdCombo" layoutX="160.0" layoutY="90.0" prefWidth="100.0" />
+        <Button fx:id="sortBtn" layoutX="290.0" layoutY="88.0" mnemonicParsing="false" onAction="#handleSort" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="Sort" />
+
+        <TableView fx:id="lowRatedFreelancersTable" layoutX="50.0" layoutY="130.0" prefHeight="200.0" prefWidth="700.0">
+            <columns>
+                <TableColumn fx:id="freelancerIdCol" prefWidth="80.0" text="ID" />
+                <TableColumn fx:id="nameCol" prefWidth="150.0" text="Name" />
+                <TableColumn fx:id="emailCol" prefWidth="180.0" text="Email" />
+                <TableColumn fx:id="currentRatingCol" prefWidth="100.0" text="Current Rating" />
+                <TableColumn fx:id="projectsCompletedCol" prefWidth="120.0" text="Projects Done" />
+                <TableColumn fx:id="lastWarningCol" prefWidth="120.0" text="Last Warning" />
+            </columns>
+        </TableView>
+
+        <Label layoutX="50.0" layoutY="350.0" text="Warning Message:" textFill="WHITE">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="70.0" layoutY="380.0" text="Message Type:" textFill="WHITE" />
+        <ComboBox fx:id="messageTypeCombo" layoutX="170.0" layoutY="375.0" prefWidth="150.0" />
+
+        <TextArea fx:id="warningMessageArea" layoutX="50.0" layoutY="410.0" prefHeight="100.0" prefWidth="600.0" promptText="Enter detailed warning message..." />
+
+        <Button fx:id="sendWarningBtn" layoutX="580.0" layoutY="555.0" mnemonicParsing="false" onAction="#handleSendWarning" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #FF5722; -fx-text-fill: white;" text="Send Warning" />
+
+        <Button fx:id="backBtn" layoutX="50.0" layoutY="555.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #666; -fx-text-fill: white;" text="Back" />
+    </children>
+</AnchorPane>

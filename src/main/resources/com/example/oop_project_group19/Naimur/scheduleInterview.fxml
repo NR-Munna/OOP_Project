@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Naimur.ScheduleInterviewController">
+    <children>
+        <Label layoutX="250.0" layoutY="20.0" text="Schedule Interview" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Select Freelancer:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="freelancerComboBox" layoutX="200.0" layoutY="75.0" prefWidth="200.0" promptText="Choose freelancer..." />
+
+        <Label layoutX="50.0" layoutY="130.0" text="Interview Date:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="interviewDatePicker" layoutX="200.0" layoutY="125.0" prefWidth="200.0" />
+
+        <Label layoutX="50.0" layoutY="180.0" text="Interview Time:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="interviewTimeField" layoutX="200.0" layoutY="175.0" prefWidth="200.0" promptText="HH:MM" />
+
+        <Label layoutX="50.0" layoutY="230.0" text="Interview Type:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="onlineRadio" layoutX="200.0" layoutY="230.0" text="Online" textFill="WHITE">
+            <toggleGroup>
+                <ToggleGroup fx:id="interviewType" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="inPersonRadio" layoutX="290.0" layoutY="230.0" text="In-Person" textFill="WHITE" toggleGroup="$interviewType" />
+
+        <Label layoutX="50.0" layoutY="280.0" text="Additional Notes:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="notesTextArea" layoutX="200.0" layoutY="275.0" prefHeight="100.0" prefWidth="400.0" />
+
+        <Button fx:id="scheduleBtn" layoutX="200.0" layoutY="400.0" onAction="#onScheduleInterview" prefWidth="100.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Schedule" />
+        <Button fx:id="cancelBtn" layoutX="320.0" layoutY="400.0" onAction="#onCancel" prefWidth="100.0" style="-fx-background-color: #f44336; -fx-text-fill: white;" text="Cancel" />
+        <Button fx:id="backBtn" layoutX="50.0" layoutY="530.0" onAction="#onBack" style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="Back to Dashboard" />
+    </children>
+</AnchorPane>

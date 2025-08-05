@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Samira.AdminViewAllProjectsController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="View All Projects" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="70.0" text="Filter Options:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <ComboBox fx:id="statusFilterComboBox" layoutX="50.0" layoutY="95.0" prefWidth="100.0" promptText="Status" />
+
+        <Label layoutX="160.0" layoutY="75.0" text="Budget Range:" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="minBudgetTextField" layoutX="160.0" layoutY="95.0" prefWidth="70.0" promptText="Min" />
+        <TextField fx:id="maxBudgetTextField" layoutX="240.0" layoutY="95.0" prefWidth="70.0" promptText="Max" />
+
+        <Label layoutX="320.0" layoutY="75.0" text="Date Range:" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="startDatePicker" layoutX="320.0" layoutY="95.0" prefWidth="110.0" />
+        <DatePicker fx:id="endDatePicker" layoutX="440.0" layoutY="95.0" prefWidth="110.0" />
+
+        <Button fx:id="applyFilterButton" layoutX="560.0" layoutY="95.0" onAction="#handleApplyFilter" prefWidth="80.0" text="Apply Filter" />
+
+        <TableView fx:id="projectsTable" layoutX="50.0" layoutY="140.0" prefHeight="320.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="projectIdColumn" prefWidth="50.0" text="ID" />
+                <TableColumn fx:id="projectNameColumn" prefWidth="150.0" text="Project Name" />
+                <TableColumn fx:id="clientColumn" prefWidth="120.0" text="Client" />
+                <TableColumn fx:id="statusColumn" prefWidth="80.0" text="Status" />
+                <TableColumn fx:id="budgetColumn" prefWidth="80.0" text="Budget" />
+                <TableColumn fx:id="startDateColumn" prefWidth="60.0" text="Start Date" />
+                <TableColumn fx:id="endDateColumn" prefWidth="60.0" text="End Date" />
+            </columns>
+        </TableView>
+
+        <Label fx:id="totalProjectsLabel" layoutX="50.0" layoutY="470.0" text="Total Projects: 0" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <Label fx:id="totalBudgetLabel" layoutX="200.0" layoutY="470.0" text="Total Budget: $0" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="clearFilterButton" layoutX="350.0" layoutY="470.0" onAction="#handleClearFilter" prefWidth="100.0" text="Clear Filters" />
+        <Button fx:id="refreshButton" layoutX="460.0" layoutY="470.0" onAction="#handleRefresh" prefWidth="80.0" text="Refresh" />
+        <Button fx:id="backButton" layoutX="550.0" layoutY="470.0" onAction="#handleBack" prefWidth="100.0" text="Back to Dashboard" />
+    </children>
+</AnchorPane>

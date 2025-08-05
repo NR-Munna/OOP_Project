@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom, #667eea, #764ba2);" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Adnan.RReviewFreelancerController">
+    <children>
+        <Label layoutX="250.0" layoutY="20.0" text="Review Freelancer Capability" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="70.0" text="Active Freelancers:" textFill="WHITE">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="freelancersTable" layoutX="50.0" layoutY="95.0" prefHeight="180.0" prefWidth="700.0">
+            <columns>
+                <TableColumn fx:id="freelancerIdCol" prefWidth="80.0" text="ID" />
+                <TableColumn fx:id="nameCol" prefWidth="150.0" text="Name" />
+                <TableColumn fx:id="skillsCol" prefWidth="200.0" text="Skills" />
+                <TableColumn fx:id="experienceCol" prefWidth="100.0" text="Experience" />
+                <TableColumn fx:id="ratingCol" prefWidth="80.0" text="Rating" />
+                <TableColumn fx:id="availabilityCol" prefWidth="90.0" text="Availability" />
+            </columns>
+        </TableView>
+
+        <Label layoutX="50.0" layoutY="290.0" text="Project Requirements:" textFill="WHITE">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="70.0" layoutY="320.0" text="Required Skills:" textFill="WHITE" />
+        <TextField fx:id="requiredSkillsField" layoutX="180.0" layoutY="315.0" prefWidth="300.0" />
+
+        <Label layoutX="70.0" layoutY="360.0" text="Project Complexity:" textFill="WHITE" />
+        <ComboBox fx:id="complexityCombo" layoutX="200.0" layoutY="355.0" prefWidth="120.0" />
+
+        <Label layoutX="350.0" layoutY="360.0" text="Estimated Duration:" textFill="WHITE" />
+        <TextField fx:id="durationField" layoutX="480.0" layoutY="355.0" prefWidth="100.0" />
+
+        <Label layoutX="50.0" layoutY="400.0" text="Capability Assessment:" textFill="WHITE">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="70.0" layoutY="443.0" text="Workload Status:" textFill="WHITE" />
+        <Label fx:id="workloadStatusLabel" layoutX="180.0" layoutY="443.0" text="Available" textFill="WHITE" />
+
+        <Label layoutX="350.0" layoutY="443.0" text="Current Projects:" textFill="WHITE" />
+        <Label fx:id="currentProjectsLabel" layoutX="460.0" layoutY="443.0" text="2" textFill="WHITE" />
+
+        <TextArea fx:id="assessmentNotes" layoutX="50.0" layoutY="490.0" prefHeight="60.0" prefWidth="500.0" promptText="Enter assessment notes..." />
+
+        <Button fx:id="approveBtn" layoutX="580.0" layoutY="490.0" mnemonicParsing="false" onAction="#handleApproveFreelancer" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Approve" />
+
+        <Button fx:id="declineBtn" layoutX="580.0" layoutY="530.0" mnemonicParsing="false" onAction="#handleDeclineFreelancer" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #f44336; -fx-text-fill: white;" text="Decline" />
+
+        <Button fx:id="backBtn" layoutX="50.0" layoutY="565.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #666; -fx-text-fill: white;" text="Back" />
+    </children>
+</AnchorPane>

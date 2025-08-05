@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Naimur.ViewRatingsController">
+    <children>
+        <Label layoutX="280.0" layoutY="20.0" text="Freelancer Ratings" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="70.0" text="Filter by Date Range:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="fromDatePicker" layoutX="200.0" layoutY="65.0" prefWidth="120.0" promptText="From" />
+        <Label layoutX="330.0" layoutY="70.0" text="to" textFill="WHITE" />
+        <DatePicker fx:id="toDatePicker" layoutX="350.0" layoutY="65.0" prefWidth="120.0" promptText="To" />
+
+        <Label layoutX="500.0" layoutY="70.0" text="Min Rating:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="ratingFilterCombo" layoutX="580.0" layoutY="65.0" prefWidth="80.0" />
+
+        <Button fx:id="filterBtn" layoutX="580.0" layoutY="100.0" onAction="#onApplyFilter" style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="Apply Filter" />
+
+        <TableView fx:id="ratingsTable" layoutX="50.0" layoutY="140.0" prefHeight="350.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="freelancerColumn" prefWidth="150.0" text="Freelancer Name" />
+                <TableColumn fx:id="projectColumn" prefWidth="120.0" text="Project" />
+                <TableColumn fx:id="clientColumn" prefWidth="120.0" text="Client" />
+                <TableColumn fx:id="ratingColumn" prefWidth="80.0" text="Rating" />
+                <TableColumn fx:id="dateColumn" prefWidth="100.0" text="Date" />
+                <TableColumn fx:id="commentColumn" prefWidth="130.0" text="Comments" />
+            </columns>
+        </TableView>
+
+        <Label layoutX="50.0" layoutY="510.0" text="Average Rating:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="averageRatingLabel" layoutX="170.0" layoutY="510.0" text="0.0" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="refreshBtn" layoutX="400.0" layoutY="505.0" onAction="#onRefresh" style="-fx-background-color: #FF9800; -fx-text-fill: white;" text="Refresh" />
+        <Button fx:id="backBtn" layoutX="500.0" layoutY="505.0" onAction="#onBack" style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="Back to Dashboard" />
+    </children>
+</AnchorPane>

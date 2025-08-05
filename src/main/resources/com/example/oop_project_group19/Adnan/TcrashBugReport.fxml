@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom, #667eea, #764ba2);" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Adnan.TCrashBugReportsController">
+    <children>
+        <Label layoutX="330.0" layoutY="20.0" text="Create Crash &amp; Bug Reports" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="70.0" text="Report Type:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <RadioButton fx:id="crashReportRadio" layoutX="150.0" layoutY="70.0" selected="true" text="Crash Report" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="reportTypeGroup" />
+         </toggleGroup>
+        </RadioButton>
+
+        <RadioButton fx:id="bugReportRadio" layoutX="260.0" layoutY="70.0" text="Bug Report" textFill="WHITE" toggleGroup="$reportTypeGroup">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </RadioButton>
+
+        <RadioButton fx:id="performanceIssueRadio" layoutX="360.0" layoutY="70.0" text="Performance Issue" textFill="WHITE" toggleGroup="$reportTypeGroup">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </RadioButton>
+
+        <Label layoutX="50.0" layoutY="110.0" text="Incident Details:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="140.0" text="Date/Time:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="incidentDatePicker" layoutX="130.0" layoutY="137.0" prefWidth="150.0" style="-fx-background-color: rgba(255,255,255,0.8); -fx-background-radius: 5;" />
+
+        <Label layoutX="300.0" layoutY="140.0" text="Time:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="incidentTimeField" layoutX="340.0" layoutY="137.0" prefWidth="100.0" promptText="HH:MM" style="-fx-background-color: rgba(255,255,255,0.8); -fx-background-radius: 5;" />
+
+        <Label layoutX="460.0" layoutY="140.0" text="Severity:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="severityCombo" layoutX="520.0" layoutY="137.0" prefWidth="120.0" style="-fx-background-color: rgba(255,255,255,0.8); -fx-background-radius: 5;" />
+
+        <Label layoutX="50.0" layoutY="180.0" text="Crash/Bug Description:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="descriptionArea" layoutX="50.0" layoutY="200.0" prefHeight="100.0" prefWidth="600.0" promptText="Describe the crash or bug in detail..." style="-fx-background-color: rgba(255,255,255,0.8); -fx-background-radius: 5;" wrapText="true" />
+
+        <Label layoutX="50.0" layoutY="320.0" text="Error Reason/Cause:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="errorReasonField" layoutX="180.0" layoutY="317.0" prefWidth="470.0" promptText="Enter the suspected cause or error message" style="-fx-background-color: rgba(255,255,255,0.8); -fx-background-radius: 5;" />
+
+        <Label layoutX="50.0" layoutY="360.0" text="Affected System Components:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <CheckBox fx:id="databaseCheckbox" layoutX="50.0" layoutY="390.0" text="Database" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </CheckBox>
+
+        <CheckBox fx:id="authenticationCheckbox" layoutX="150.0" layoutY="390.0" text="Authentication" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </CheckBox>
+
+        <CheckBox fx:id="paymentCheckbox" layoutX="280.0" layoutY="390.0" text="Payment System" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </CheckBox>
+
+        <CheckBox fx:id="uiCheckbox" layoutX="420.0" layoutY="390.0" text="User Interface" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </CheckBox>
+
+        <CheckBox fx:id="networkCheckbox" layoutX="50.0" layoutY="420.0" text="Network/API" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </CheckBox>
+
+        <CheckBox fx:id="securityCheckbox" layoutX="150.0" layoutY="420.0" text="Security" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </CheckBox>
+
+        <CheckBox fx:id="backendCheckbox" layoutX="230.0" layoutY="420.0" text="Backend Services" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </CheckBox>
+
+        <CheckBox fx:id="mobileCheckbox" layoutX="380.0" layoutY="420.0" text="Mobile App" textFill="WHITE">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </CheckBox>
+
+        <Label layoutX="50.0" layoutY="460.0" text="Steps to Reproduce:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="stepsToReproduceArea" layoutX="50.0" layoutY="480.0" prefHeight="80.0" prefWidth="400.0" promptText="List the steps to reproduce this issue..." style="-fx-background-color: rgba(255,255,255,0.8); -fx-background-radius: 5;" wrapText="true" />
+
+        <Button fx:id="createReportBtn" layoutX="50.0" layoutY="580.0" onAction="#handleCreateReport" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #28a745; -fx-background-radius: 5; -fx-text-fill: white;" text="Create Report" />
+
+        <Button fx:id="clearFormBtn" layoutX="180.0" layoutY="580.0" onAction="#handleClearForm" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #6c757d; -fx-background-radius: 5; -fx-text-fill: white;" text="Clear Form" />
+
+        <Label layoutX="320.0" layoutY="580.0" text="Generated Report:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="generatedReportArea" editable="false" layoutX="320.0" layoutY="600.0" prefHeight="80.0" prefWidth="400.0" style="-fx-background-color: rgba(255,255,255,0.8); -fx-background-radius: 5;" wrapText="true" />
+
+        <Button fx:id="saveReportBtn" layoutX="740.0" layoutY="600.0" onAction="#handleSaveReport" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #007bff; -fx-background-radius: 5; -fx-text-fill: white;" text="Save Report" />
+    </children>
+</AnchorPane>

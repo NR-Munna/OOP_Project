@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2c3e50;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Shawon.ViewProposalsController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="View Proposals" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Select Job:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="jobComboBox" layoutX="50.0" layoutY="105.0" onAction="#handleJobSelection" prefHeight="30.0" prefWidth="400.0" promptText="Select a posted job" />
+
+        <Label layoutX="50.0" layoutY="150.0" text="Proposals:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="proposalsTable" layoutX="50.0" layoutY="175.0" prefHeight="300.0" prefWidth="700.0">
+            <columns>
+                <TableColumn fx:id="freelancerNameColumn" prefWidth="150.0" text="Freelancer Name" />
+                <TableColumn fx:id="proposalAmountColumn" prefWidth="100.0" text="Bid Amount" />
+                <TableColumn fx:id="deliveryTimeColumn" prefWidth="100.0" text="Delivery Time" />
+                <TableColumn fx:id="ratingColumn" prefWidth="80.0" text="Rating" />
+                <TableColumn fx:id="proposalTextColumn" prefWidth="270.0" text="Proposal Description" />
+            </columns>
+        </TableView>
+
+        <Label layoutX="50.0" layoutY="490.0" text="Proposal Details:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="proposalDetailsArea" editable="false" layoutX="50.0" layoutY="515.0" prefHeight="60.0" prefWidth="500.0" wrapText="true" />
+
+        <Button fx:id="viewProfileButton" layoutX="570.0" layoutY="490.0" onAction="#handleViewProfile" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #9b59b6; -fx-text-fill: white;" text="View Profile" />
+        <Button fx:id="hireButton" layoutX="570.0" layoutY="530.0" onAction="#handleHire" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #27ae60; -fx-text-fill: white;" text="Hire" />
+        <Button fx:id="backButton" layoutX="690.0" layoutY="530.0" onAction="#handleBack" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: #95a5a6; -fx-text-fill: white;" text="Back" />
+    </children>
+</AnchorPane>

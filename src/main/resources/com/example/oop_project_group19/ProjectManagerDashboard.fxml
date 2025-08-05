@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.ProjectManagerDashboardController">
+
+
+    <Label layoutX="216.0" layoutY="41.0" text="Project Manager Dashboard" textFill="white">
+        <font>
+            <Font name="System Bold" size="28.0" />
+        </font>
+    </Label>
+
+
+    <AnchorPane layoutX="50.0" layoutY="100.0" prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: rgba(255, 255, 255, 0.9); -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 5);">
+
+
+        <Button fx:id="createScheduleButton" layoutX="135.0" layoutY="93.0" onAction="#handleCreateSchedule" prefHeight="40.0" prefWidth="205.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold;" text="Create Schedule" />
+
+        <Button fx:id="assignFreelancersButton" layoutX="135.0" layoutY="143.0" onAction="#handleAssignFreelancers" prefHeight="40.0" prefWidth="205.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold;" text="Assign Freelancers" />
+
+        <Button fx:id="manageDeadlinesButton" layoutX="135.0" layoutY="193.0" onAction="#handleManageDeadlines" prefHeight="40.0" prefWidth="205.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold;" text="Manage Deadlines" />
+
+        <Button fx:id="editProjectButton" layoutX="135.0" layoutY="243.0" onAction="#handleEditProject" prefHeight="40.0" prefWidth="205.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold;" text="Edit Project Updates" />
+
+
+        <Button fx:id="monitorBudgetButton" layoutX="360.0" layoutY="93.0" onAction="#handleMonitorBudget" prefHeight="40.0" prefWidth="205.0" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold;" text="Monitor Budget" />
+
+        <Button fx:id="createChecklistButton" layoutX="360.0" layoutY="143.0" onAction="#handleCreateChecklist" prefHeight="40.0" prefWidth="205.0" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold;" text="Create Checklist" />
+
+        <Button fx:id="archiveProjectsButton" layoutX="360.0" layoutY="193.0" onAction="#handleArchiveProjects" prefHeight="40.0" prefWidth="205.0" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold;" text="Archive Projects" />
+
+        <Button fx:id="editProjectDetailsButton" layoutX="360.0" layoutY="243.0" onAction="#handleEditProjectDetails" prefHeight="40.0" prefWidth="205.0" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold;" text="Edit Project Details" />
+
+
+        <Button fx:id="logoutButton" layoutX="565.0" layoutY="368.0" onAction="#handleLogout" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold;" text="Logout" />
+    </AnchorPane>
+
+
+    <Label fx:id="statusLabel" layoutX="50.0" layoutY="570.0" prefWidth="700.0" textAlignment="CENTER" textFill="white">
+        <font>
+            <Font size="12.0" />
+        </font>
+    </Label>
+</AnchorPane>

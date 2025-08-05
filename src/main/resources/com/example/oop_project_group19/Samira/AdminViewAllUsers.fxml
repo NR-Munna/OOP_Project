@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Samira.AdminViewAllUsersController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="View All Users" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Filter Options:" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <ComboBox fx:id="statusFilterComboBox" layoutX="50.0" layoutY="105.0" prefWidth="120.0" promptText="Status" />
+        <ComboBox fx:id="typeFilterComboBox" layoutX="180.0" layoutY="105.0" prefWidth="120.0" promptText="User Type" />
+        <Button fx:id="applyFilterButton" layoutX="310.0" layoutY="105.0" onAction="#handleApplyFilter" prefWidth="80.0" text="Apply Filter" />
+        <Button fx:id="clearFilterButton" layoutX="400.0" layoutY="105.0" onAction="#handleClearFilter" prefWidth="80.0" text="Clear" />
+
+        <TableView fx:id="usersTable" layoutX="50.0" layoutY="150.0" prefHeight="350.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="60.0" text="ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="150.0" text="Name" />
+                <TableColumn fx:id="typeColumn" prefWidth="120.0" text="Type" />
+                <TableColumn fx:id="statusColumn" prefWidth="100.0" text="Status" />
+                <TableColumn fx:id="joinDateColumn" prefWidth="170.0" text="Join Date" />
+            </columns>
+        </TableView>
+
+        <Label fx:id="totalUsersLabel" layoutX="50.0" layoutY="520.0" text="Total Users: 0" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="backButton" layoutX="550.0" layoutY="530.0" onAction="#handleBack" prefWidth="100.0" text="Back to Dashboard" />
+    </children>
+</AnchorPane>

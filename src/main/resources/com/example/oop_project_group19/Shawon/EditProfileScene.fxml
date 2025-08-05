@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2c3e50;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Shawon.EditProfileController">
+    <children>
+        <Label layoutX="50.0" layoutY="30.0" text="Edit Profile" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="80.0" text="Basic Information:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="110.0" text="Full Name:" textFill="WHITE" />
+        <TextField fx:id="fullNameField" layoutX="130.0" layoutY="105.0" prefHeight="30.0" prefWidth="200.0" />
+
+        <Label layoutX="350.0" layoutY="110.0" text="Professional Title:" textFill="WHITE" />
+        <TextField fx:id="professionalTitleField" layoutX="470.0" layoutY="105.0" prefHeight="30.0" prefWidth="250.0" />
+
+        <Label layoutX="50.0" layoutY="150.0" text="Email:" textFill="WHITE" />
+        <TextField fx:id="emailField" layoutX="100.0" layoutY="145.0" prefHeight="30.0" prefWidth="200.0" />
+
+        <Label layoutX="320.0" layoutY="150.0" text="Phone:" textFill="WHITE" />
+        <TextField fx:id="phoneField" layoutX="370.0" layoutY="145.0" prefHeight="30.0" prefWidth="150.0" />
+
+        <Label layoutX="540.0" layoutY="150.0" text="Location:" textFill="WHITE" />
+        <TextField fx:id="locationField" layoutX="600.0" layoutY="145.0" prefHeight="30.0" prefWidth="150.0" />
+
+        <Label layoutX="50.0" layoutY="190.0" text="Professional Bio:" textFill="WHITE" />
+        <TextArea fx:id="bioArea" layoutX="50.0" layoutY="215.0" prefHeight="80.0" prefWidth="700.0" promptText="Write a compelling bio that showcases your expertise and experience..." wrapText="true" />
+
+        <Label layoutX="50.0" layoutY="310.0" text="Skills:" textFill="WHITE" />
+        <TextField fx:id="skillsField" layoutX="100.0" layoutY="305.0" prefHeight="30.0" prefWidth="500.0" promptText="Enter your skills (comma separated)" />
+        <Button fx:id="addSkillButton" layoutX="610.0" layoutY="305.0" onAction="#handleAddSkill" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #3498db; -fx-text-fill: white;" text="Add Skill" />
+
+        <Label layoutX="50.0" layoutY="350.0" text="Hourly Rate ($):" textFill="WHITE" />
+        <TextField fx:id="hourlyRateField" layoutX="150.0" layoutY="345.0" prefHeight="30.0" prefWidth="100.0" />
+
+        <Label layoutX="270.0" layoutY="350.0" text="Experience Level:" textFill="WHITE" />
+        <ComboBox fx:id="experienceLevelCombo" layoutX="390.0" layoutY="345.0" prefHeight="30.0" prefWidth="150.0" promptText="Select level" />
+
+        <Label layoutX="560.0" layoutY="350.0" text="Availability:" textFill="WHITE" />
+        <ComboBox fx:id="availabilityCombo" layoutX="650.0" layoutY="345.0" prefHeight="30.0" prefWidth="100.0" promptText="Status" />
+
+        <Label layoutX="50.0" layoutY="390.0" text="Portfolio Links:" textFill="WHITE" />
+        <TextField fx:id="portfolioField" layoutX="50.0" layoutY="415.0" prefHeight="30.0" prefWidth="400.0" promptText="Add portfolio website or social media links" />
+        <Button fx:id="addPortfolioButton" layoutX="460.0" layoutY="415.0" onAction="#handleAddPortfolio" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #9b59b6; -fx-text-fill: white;" text="Add Link" />
+
+        <Label layoutX="50.0" layoutY="460.0" text="Education:" textFill="WHITE" />
+        <TextField fx:id="educationField" layoutX="120.0" layoutY="455.0" prefHeight="30.0" prefWidth="300.0" promptText="Your educational background" />
+
+        <Label layoutX="440.0" layoutY="460.0" text="Languages:" textFill="WHITE" />
+        <TextField fx:id="languagesField" layoutX="520.0" layoutY="455.0" prefHeight="30.0" prefWidth="200.0" promptText="Languages you speak" />
+
+        <CheckBox fx:id="availableForHireCheckBox" layoutX="50.0" layoutY="500.0" text="Available for hire" textFill="WHITE" />
+        <CheckBox fx:id="publicProfileCheckBox" layoutX="200.0" layoutY="500.0" text="Make profile public" textFill="WHITE" />
+        <CheckBox fx:id="emailNotificationCheckBox" layoutX="350.0" layoutY="500.0" text="Email notifications" textFill="WHITE" />
+
+        <Button fx:id="saveProfileButton" layoutX="580.0" layoutY="540.0" onAction="#handleSaveProfile" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #27ae60; -fx-text-fill: white;" text="Save Profile" />
+        <Button fx:id="previewButton" layoutX="480.0" layoutY="540.0" onAction="#handlePreview" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #f39c12; -fx-text-fill: white;" text="Preview" />
+        <Button fx:id="cancelButton" layoutX="50.0" layoutY="540.0" onAction="#handleCancel" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #e74c3c; -fx-text-fill: white;" text="Cancel" />
+        <Button fx:id="backButton" layoutX="720.0" layoutY="540.0" onAction="#handleBack" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: #95a5a6; -fx-text-fill: white;" text="Back" />
+
+        <Label fx:id="statusLabel" layoutX="150.0" layoutY="555.0" textFill="#f39c12">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
