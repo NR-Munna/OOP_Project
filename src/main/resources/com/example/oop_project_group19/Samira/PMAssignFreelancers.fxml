@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Samira.PMAssignFreelancersController">
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, rgba(74, 144, 226, 0.8), rgba(80, 227, 194, 0.6));" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_project_group19.Samira.PMAssignFreelancersController">
     <children>
         <Label layoutX="50.0" layoutY="30.0" text="Assign Freelancers to Projects" textFill="WHITE">
             <font>
@@ -28,7 +32,7 @@
             </columns>
         </TableView>
 
-        <Button fx:id="assignFreelancerButton" layoutX="550.0" layoutY="235.0" onAction="#handleAssignFreelancer" prefWidth="100.0" text="Assign Freelancer" />
+        <Button fx:id="assignFreelancerButton" layoutX="522.0" layoutY="235.0" onAction="#handleAssignFreelancer" prefHeight="25.0" prefWidth="128.0" text="Assign Freelancer" />
 
         <Label fx:id="selectedProjectLabel" layoutX="50.0" layoutY="240.0" text="Selected: None" textFill="WHITE">
             <font>
@@ -74,7 +78,7 @@
         </Label>
         <TextField fx:id="assignmentNotesTextField" layoutX="300.0" layoutY="530.0" prefWidth="200.0" promptText="Optional notes..." />
 
-        <Button fx:id="assignButton" layoutX="520.0" layoutY="530.0" onAction="#handleAssign" prefWidth="80.0" text="Assign" />
+        <Button fx:id="assignButton" layoutX="542.0" layoutY="530.0" onAction="#handleAssign" prefHeight="25.0" prefWidth="128.0" text="Assign" />
 
         <Label fx:id="statusLabel" layoutX="50.0" layoutY="560.0" textFill="LIGHTGREEN" visible="false">
             <font>
@@ -82,6 +86,6 @@
             </font>
         </Label>
 
-        <Button fx:id="backButton" layoutX="550.0" layoutY="560.0" onAction="#handleBack" prefWidth="100.0" text="Back to Dashboard" />
+        <Button fx:id="backButton" layoutX="542.0" layoutY="565.0" onAction="#handleBack" prefHeight="25.0" prefWidth="128.0" text="Back to Dashboard" />
     </children>
 </AnchorPane>
