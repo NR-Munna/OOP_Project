@@ -80,7 +80,7 @@ public class ManageLeaveController implements Initializable {
 
     private void loadLeaveRequests() {
         leaveRequests = FXCollections.observableArrayList(
-                new LeaveRequest("John Doe", "Sick Leave", LocalDate.of(2024, 3, 10), LocalDate.of(2024, 3, 12), 3, "Flu symptoms"),
+                new LeaveRequest("Christian Williams", "Sick Leave", LocalDate.of(2024, 3, 10), LocalDate.of(2024, 3, 12), 3, "Flu symptoms"),
                 new LeaveRequest("Jane Smith", "Annual Leave", LocalDate.of(2024, 3, 15), LocalDate.of(2024, 3, 20), 5, "Family vacation"),
                 new LeaveRequest("Mike Johnson", "Personal Leave", LocalDate.of(2024, 3, 18), LocalDate.of(2024, 3, 19), 2, "Personal matters"),
                 new LeaveRequest("Sarah Wilson", "Sick Leave", LocalDate.of(2024, 3, 22), LocalDate.of(2024, 3, 24), 3, "Medical appointment"),

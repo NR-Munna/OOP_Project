@@ -68,7 +68,7 @@ public class SubmitProposalController implements Initializable {
             String coverLetter = coverLetterArea.getText();
             String deliveryTime = deliveryTimeCombo.getValue();
 
-            Proposal proposal = new Proposal(proposalId, "FL001", "John Freelancer", currentJob.getJobId(),
+            Proposal proposal = new Proposal(proposalId, "FL001", "Adnan Freelancer", currentJob.getJobId(),
                     bidAmount, coverLetter, getDeliveryDays(deliveryTime), 4.5f);
 
             statusLabel.setText("Proposal submitted successfully!");

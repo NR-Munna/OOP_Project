@@ -80,7 +80,7 @@ public class EmployeeRecordsController implements Initializable {
 
     private void initializeComboBoxes() {
         ObservableList<String> employeeList = FXCollections.observableArrayList(
-                "John Doe", "Jane Smith", "Mike Johnson", "Sarah Wilson", "David Brown"
+                "Christian Williams", "Jane Smith", "Mike Johnson", "Sarah Wilson", "David Brown"
         );
         employeeComboBox.setItems(employeeList);
 
@@ -92,7 +92,7 @@ public class EmployeeRecordsController implements Initializable {
 
     private void initializeEmployees() {
         employees = new HashMap<>();
-        employees.put("John Doe", new Employee("EMP001", "John Doe", "HR Manager", "Human Resources", 55000.0f, LocalDate.of(2020, 1, 15), "Active", "Experienced HR professional"));
+        employees.put("Christian Williams", new Employee("EMP001", "Christian Williams", "HR Manager", "Human Resources", 55000.0f, LocalDate.of(2020, 1, 15), "Active", "Experienced HR professional"));
         employees.put("Jane Smith", new Employee("EMP002", "Jane Smith", "Senior Developer", "Development", 75000.0f, LocalDate.of(2019, 3, 10), "Active", "Full-stack developer"));
         employees.put("Mike Johnson", new Employee("EMP003", "Mike Johnson", "Project Manager", "Project Management", 65000.0f, LocalDate.of(2021, 6, 20), "Active", "Agile certified PM"));
         employees.put("Sarah Wilson", new Employee("EMP004", "Sarah Wilson", "Finance Officer", "Finance", 58000.0f, LocalDate.of(2020, 8, 5), "Active", "CPA certified"));

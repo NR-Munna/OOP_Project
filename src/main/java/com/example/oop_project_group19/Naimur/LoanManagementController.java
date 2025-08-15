@@ -113,7 +113,7 @@ public class LoanManagementController {
 
     private void loadLoanRequests() {
         loanRequests = FXCollections.observableArrayList(
-                new LoanRequest("LR-001", "John Doe", 5000.0f, LocalDate.of(2024, 3, 10), "High", "Pending", "Medical emergency - need funds for treatment"),
+                new LoanRequest("LR-001", "Christian Williams", 5000.0f, LocalDate.of(2024, 3, 10), "High", "Pending", "Medical emergency - need funds for treatment"),
                 new LoanRequest("LR-002", "Jane Smith", 3000.0f, LocalDate.of(2024, 3, 12), "Medium", "Pending", "Equipment purchase for new project"),
                 new LoanRequest("LR-003", "Mike Johnson", 2500.0f, LocalDate.of(2024, 3, 15), "Low", "Pending", "Professional certification course fees"),
                 new LoanRequest("LR-004", "Sarah Wilson", 7500.0f, LocalDate.of(2024, 3, 18), "High", "Pending", "Home renovation for home office setup"),

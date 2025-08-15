@@ -92,7 +92,7 @@ public class TrackTrainingController implements Initializable {
 
     private void loadTrainingRecords() {
         trainingRecords = FXCollections.observableArrayList(
-                new Training("John Doe", "Advanced Java Programming", LocalDate.of(2024, 1, 10), 85.0f, "In Progress"),
+                new Training("Christian Williams", "Advanced Java Programming", LocalDate.of(2024, 1, 10), 85.0f, "In Progress"),
                 new Training("Jane Smith", "React Development", LocalDate.of(2024, 1, 15), 92.0f, "In Progress"),
                 new Training("Mike Johnson", "Database Design", LocalDate.of(2024, 2, 1), 78.0f, "In Progress"),
                 new Training("Sarah Wilson", "UI/UX Fundamentals", LocalDate.of(2024, 1, 20), 95.0f, "In Progress"),

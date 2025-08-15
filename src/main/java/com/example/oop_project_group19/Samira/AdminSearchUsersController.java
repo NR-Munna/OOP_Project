@@ -93,11 +93,11 @@ public class AdminSearchUsersController implements Initializable {
 
     private void loadSampleData() {
         allUsers = FXCollections.observableArrayList(
-                new User(1, "John Doe", "Client", "Active", LocalDate.of(2024, 1, 15), "john@email.com"),
-                new User(2, "Jane Smith", "Freelancer", "Active", LocalDate.of(2024, 2, 20), "jane@email.com"),
-                new User(3, "Bob Wilson", "Admin", "Active", LocalDate.of(2023, 12, 10), "bob@email.com"),
-                new User(4, "Alice Brown", "Project Manager", "Inactive", LocalDate.of(2024, 3, 5), "alice@email.com"),
-                new User(5, "Charlie Davis", "HR Manager", "Active", LocalDate.of(2024, 1, 25), "charlie@email.com")
+                new User(1, "Shahnewaz Shawon", "Client", "Active", LocalDate.of(2024, 1, 15), "shawon@email.com"),
+                new User(2, "Samira Fatema", "Freelancer", "Active", LocalDate.of(2024, 2, 20), "samira@email.com"),
+                new User(3, "Naimur Rahman", "Admin", "Active", LocalDate.of(2023, 12, 10), "naimur@email.com"),
+                new User(4, "Abir Hossain", "Project Manager", "Inactive", LocalDate.of(2024, 3, 5), "abir@email.com"),
+                new User(5, "ABCD", "HR Manager", "Active", LocalDate.of(2024, 1, 25), "charlie@email.com")
         );
     }
 

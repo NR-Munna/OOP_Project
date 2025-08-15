@@ -73,8 +73,8 @@ public class ReviewWorkController {
     @FXML
     public void initialize() {
         projectComboBox.getItems().addAll(
-                new Project("P1", "Website Development", "C1", "F1", "John Smith", null, null, 1500.0, "In Review"),
-                new Project("P2", "Mobile App", "C1", "F2", "Sarah Johnson", null, null, 2000.0, "In Review")
+                new Project("P1", "Website Development", "C1", "F1", "Hakla Khan", null, null, 1500.0, "In Review"),
+                new Project("P2", "Mobile App", "C1", "F2", "Jarek Tia", null, null, 2000.0, "In Review")
         );
 
         fileNameColumn.setCellValueFactory(new PropertyValueFactory<>("fileName"));

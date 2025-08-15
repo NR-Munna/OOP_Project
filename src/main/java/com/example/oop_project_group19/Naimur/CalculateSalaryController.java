@@ -103,12 +103,12 @@ public class CalculateSalaryController implements Initializable {
 
     private void loadSalaryRecords() {
         salaryRecords = FXCollections.observableArrayList(
-                new SalaryRecord("John Doe", "HR Manager", 28.5f, 160.0f, 500.0f, 200.0f, "Pending"),
-                new SalaryRecord("Jane Smith", "Senior Developer", 45.0f, 168.0f, 800.0f, 350.0f, "Pending"),
-                new SalaryRecord("Mike Johnson", "Project Manager", 38.0f, 165.0f, 600.0f, 250.0f, "Pending"),
-                new SalaryRecord("Sarah Wilson", "Finance Officer", 32.0f, 162.0f, 400.0f, 180.0f, "Pending"),
-                new SalaryRecord("David Brown", "Tech Support Lead", 30.0f, 158.0f, 350.0f, 150.0f, "Pending"),
-                new SalaryRecord("Alex Turner", "UI Designer", 35.0f, 160.0f, 450.0f, 200.0f, "Calculated"),
+                new SalaryRecord("Abel Tesfaye", "HR Manager", 28.5f, 160.0f, 500.0f, 200.0f, "Pending"),
+                new SalaryRecord("Jordan Carter", "Senior Developer", 45.0f, 168.0f, 800.0f, 350.0f, "Pending"),
+                new SalaryRecord("Charlie Puth", "Project Manager", 38.0f, 165.0f, 600.0f, 250.0f, "Pending"),
+                new SalaryRecord("Rakim Williams", "Finance Officer", 32.0f, 162.0f, 400.0f, 180.0f, "Pending"),
+                new SalaryRecord("Atif Aslam", "Tech Support Lead", 30.0f, 158.0f, 350.0f, 150.0f, "Pending"),
+                new SalaryRecord("Sonu Nigam", "UI Designer", 35.0f, 160.0f, 450.0f, 200.0f, "Calculated"),
                 new SalaryRecord("Emma Davis", "QA Tester", 28.0f, 155.0f, 300.0f, 120.0f, "Sent to Finance")
         );
         pendingSalaryTable.setItems(salaryRecords);

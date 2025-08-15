@@ -53,7 +53,7 @@ public class ScheduleInterviewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ObservableList<String> freelancers = FXCollections.observableArrayList(
-                "John Doe", "Jane Smith", "Mike Johnson", "Sarah Wilson", "David Brown"
+                "Hakla Khan", "The Weeknd", "Pritom Hasan", "Sarah Wilson", "David Brown"
         );
         freelancerComboBox.setItems(freelancers);
 

@@ -100,7 +100,7 @@ public class ManageFreelancerController implements Initializable {
 
     private void loadFreelancers() {
         freelancers = FXCollections.observableArrayList(
-                new Freelancer("John Doe", "john.doe@email.com", "Java, JavaScript, React", 4.5f, "Active", true, LocalDate.of(2023, 1, 15)),
+                new Freelancer("Christian Williams", "williams.doe@email.com", "Java, JavaScript, React", 4.5f, "Active", true, LocalDate.of(2023, 1, 15)),
                 new Freelancer("Jane Smith", "jane.smith@email.com", "Python, Django, PostgreSQL", 4.8f, "Active", true, LocalDate.of(2023, 2, 20)),
                 new Freelancer("Mike Johnson", "mike.johnson@email.com", "PHP, Laravel, MySQL", 4.2f, "Active", false, LocalDate.of(2023, 3, 10)),
                 new Freelancer("Sarah Wilson", "sarah.wilson@email.com", "UI/UX Design, Figma", 4.7f, "Active", true, LocalDate.of(2023, 4, 5)),

@@ -86,7 +86,7 @@ public class GeneratePayStubsController {
 
     private void loadFreelancers() {
         freelancers = FXCollections.observableArrayList(
-                new FinanceFreelancer("FL-001", "John Doe", "john.doe@email.com", "Java, Spring Boot, MySQL"),
+                new FinanceFreelancer("FL-001", "Christian Williams", "williams@email.com", "Java, Spring Boot, MySQL"),
                 new FinanceFreelancer("FL-002", "Jane Smith", "jane.smith@email.com", "React, Node.js, MongoDB"),
                 new FinanceFreelancer("FL-003", "Mike Johnson", "mike.johnson@email.com", "Python, Django, PostgreSQL"),
                 new FinanceFreelancer("FL-004", "Sarah Wilson", "sarah.wilson@email.com", "UI/UX Design, Figma, Adobe XD"),

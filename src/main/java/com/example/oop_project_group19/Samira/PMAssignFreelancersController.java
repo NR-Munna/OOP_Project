@@ -97,7 +97,7 @@ public class PMAssignFreelancersController implements Initializable {
         );
 
         freelancerList.addAll(
-                new Freelancer(1, "John Smith", "Java, Spring Boot", 50f, 4.8f, true),
+                new Freelancer(1, "Micheal Jackson", "Java, Spring Boot", 50f, 4.8f, true),
                 new Freelancer(2, "Sarah Wilson", "React, Node.js", 45f, 4.9f, true),
                 new Freelancer(3, "Mike Johnson", "Python, Django", 48f, 4.7f, false),
                 new Freelancer(4, "Lisa Chen", "Mobile Development", 52f, 4.9f, true)

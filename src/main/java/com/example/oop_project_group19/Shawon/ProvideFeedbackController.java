@@ -77,8 +77,8 @@ public class ProvideFeedbackController {
     @FXML
     public void initialize() {
         completedProjectCombo.getItems().addAll(
-                new Project("P1", "Website Development", "C1", "F1", "John Smith", null, null, 1500.0, "Completed"),
-                new Project("P2", "Logo Design", "C1", "F2", "Sarah Johnson", null, null, 500.0, "Completed")
+                new Project("P1", "Website Development", "C1", "F1", "Shakib Khan", null, null, 1500.0, "Completed"),
+                new Project("P2", "Logo Design", "C1", "F2", "Ananta Jalil", null, null, 500.0, "Completed")
         );
 
         String[] ratings = {"1 - Poor", "2 - Fair", "3 - Good", "4 - Very Good", "5 - Excellent"};

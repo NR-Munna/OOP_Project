@@ -61,8 +61,8 @@ public class EditProfileController implements Initializable {
     }
 
     private void loadCurrentProfile() {
-        fullNameField.setText("John Freelancer");
-        emailField.setText("john.freelancer@email.com");
+        fullNameField.setText("Naimur Freelancer");
+        emailField.setText("naimur.freelancer@gmail.com");
         phoneField.setText("+1234567890");
         locationField.setText("New York, USA");
         professionalTitleField.setText("Full Stack Developer");

@@ -91,7 +91,7 @@ public class ViewRatingsController implements Initializable {
 
     private void loadRatings() {
         allRatings = FXCollections.observableArrayList(
-                new Rating("John Doe", "ABC Corp", "Website Design", 4.5f, "Great work!", LocalDate.of(2024, 1, 15)),
+                new Rating("Christian Williams", "ABC Corp", "Website Design", 4.5f, "Great work!", LocalDate.of(2024, 1, 15)),
                 new Rating("Jane Smith", "XYZ Ltd", "Mobile App", 5.0f, "Excellent developer", LocalDate.of(2024, 1, 20)),
                 new Rating("Mike Johnson", "Tech Solutions", "Database Design", 4.0f, "Good job", LocalDate.of(2024, 1, 25)),
                 new Rating("Sarah Wilson", "StartUp Inc", "UI/UX Design", 4.8f, "Amazing designer", LocalDate.of(2024, 2, 5)),
