@@ -42,7 +42,7 @@
 
         <Button fx:id="applyFiltersBtn" layoutX="800.0" layoutY="65.0" onAction="#handleApplyFilters" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 5;" text="Apply" />
 
-        <TableView fx:id="ticketsTable" layoutX="50.0" layoutY="120.0" prefHeight="480.0" prefWidth="800.0" style="-fx-background-color: white;">
+        <TableView fx:id="ticketsTable" layoutX="32.0" layoutY="122.0" prefHeight="480.0" prefWidth="837.0" style="-fx-background-color: white;">
             <columns>
                 <TableColumn fx:id="ticketIdCol" prefWidth="80.0" text="Ticket ID" />
                 <TableColumn fx:id="priorityCol" prefWidth="100.0" text="Priority" />
@@ -50,7 +50,7 @@
                 <TableColumn fx:id="categoryCol" prefWidth="120.0" text="Category" />
                 <TableColumn fx:id="creationDateCol" prefWidth="150.0" text="Creation Date" />
                 <TableColumn fx:id="subjectCol" prefWidth="200.0" text="Subject" />
-                <TableColumn fx:id="clientCol" prefWidth="50.0" text="Client" />
+                <TableColumn fx:id="clientCol" prefWidth="86.0" text="Client" />
             </columns>
         </TableView>
 
