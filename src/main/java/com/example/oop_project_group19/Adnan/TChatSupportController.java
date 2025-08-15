@@ -63,7 +63,7 @@ public class TChatSupportController {
     }
 
     private void loadSampleData() {
-        chatRequestsList.add(new ChatRequest("CR001", "U001", "John Doe", "High"));
+        chatRequestsList.add(new ChatRequest("CR001", "U001", "Christian Williams", "High"));
         chatRequestsList.add(new ChatRequest("CR002", "U002", "Jane Smith", "Medium"));
         chatRequestsList.add(new ChatRequest("CR003", "U003", "Bob Johnson", "Low"));
         chatRequestsList.add(new ChatRequest("CR004", "U004", "Alice Brown", "High"));
